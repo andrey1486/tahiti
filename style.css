@@ -1,5 +1,5 @@
 /*
-Theme Name: Tahini
+Theme Name: Tahiti
 Theme URI:
 Author: Andrey Chervonuk
 Author URI: https://wordpress.org
@@ -13,3 +13,40 @@ License URI:
 Text Domain: TAHINI
 Tags:
 */
+
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gotham Book', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    color: #2C2B2B;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.container{
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+
+
+
+
+
+
+
+
