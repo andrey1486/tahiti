@@ -1,7 +1,7 @@
 /*
 Theme Name: Tahiti
 Theme URI:
-Author: Andrey Chervonuk
+Author: Andrey Chervonuik
 Author URI: https://wordpress.org
 Description: test task for WHA
 Requires at least: 1.0.0
@@ -14,6 +14,15 @@ Text Domain: TAHINI
 Tags:
 */
 
+:root {
+    --main-bg-color: #fbfbed;
+    --secondary-bg-color: #ffffff;
+    --main-text-color: #f2597f;
+    --secondary-text-color: #ffffff;
+    --btn-bg-color: #3dbe98;
+    --btn-secondary-bg-color: #ee2255;
+    --btn-tertiary-bg-color: #21b6c7;
+}
 
 *,
 *::after,
@@ -21,9 +30,29 @@ Tags:
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Gotham Bold", sans-serif;
+    src: url("/assets/fonts/Gotham/GothamBold.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "Gotham Book", sans-serif;
+    src: url("/assets/fonts/Gotham/GothamBook.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "Gotham Book Italic", sans-serif;
+    src: url("/assets/fonts/Gotham/GothamBookItalic.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "Gotham Bold Light", sans-serif;
+    src: url("/assets/fonts/Gotham/GothamLight.woff2") format("woff2")
+}
+
 body{
-    font-family: 'Gotham Book', sans-serif;
-    font-size: 18px;
+    font-family: 'Gotham Bold Light', sans-serif;
+    font-size: 32px;
     line-height: 27px;
     font-weight: 300;
     color: #2C2B2B;
@@ -36,7 +65,7 @@ a{
 }
 
 .container{
-    max-width: 1220px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 10px;
