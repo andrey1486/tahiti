@@ -15,67 +15,99 @@ Tags:
 */
 
 :root {
-    --main-bg-color: #fbfbed;
-    --secondary-bg-color: #ffffff;
-    --main-text-color: #f2597f;
-    --secondary-text-color: #ffffff;
-    --btn-bg-color: #3dbe98;
-    --btn-secondary-bg-color: #ee2255;
-    --btn-tertiary-bg-color: #21b6c7;
+  --main-bg-color: #fbfbed;
+  --secondary-bg-color: #ffffff;
+  --main-text-color: #f2597f;
+  --secondary-text-color: #ffffff;
+  --btn-bg-color: #3dbe98;
+  --btn-secondary-bg-color: #ee2255;
+  --btn-tertiary-bg-color: #21b6c7;
 }
 
 *,
 *::after,
-*::before{
-    box-sizing: border-box;
+*::before {
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Gotham Bold", sans-serif;
-    src: url("/assets/fonts/Gotham/GothamBold.woff2") format("woff2")
+  font-family: "Gotham Bold", sans-serif;
+  src: url("/assets/fonts/Gotham/GothamBold.woff2") format("woff2");
 }
 
 @font-face {
+  font-family: "Gotham Book", sans-serif;
+  src: url("/assets/fonts/Gotham/GothamBook.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham Book Italic", sans-serif;
+  src: url("/assets/fonts/Gotham/GothamBookItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham Bold Light", sans-serif;
+  src: url("/assets/fonts/Gotham/GothamLight.woff2") format("woff2");
+}
+
+body {
+  font-family: "Gotham Bold Light", sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 300;
+  color: #2c2b2b;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.container {
+  max-width: 1482px;
+}
+
+.nav-link {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--btn-secondary-bg-color);
+}
+
+.navbar-brand {
     font-family: "Gotham Book", sans-serif;
-    src: url("/assets/fonts/Gotham/GothamBook.woff2") format("woff2")
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--btn-secondary-bg-color);
 }
 
-@font-face {
-    font-family: "Gotham Book Italic", sans-serif;
-    src: url("/assets/fonts/Gotham/GothamBookItalic.woff2") format("woff2")
-}
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
 
-@font-face {
-    font-family: "Gotham Bold Light", sans-serif;
-    src: url("/assets/fonts/Gotham/GothamLight.woff2") format("woff2")
-}
+	40% {
+		transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
 
-body{
-    font-family: 'Gotham Bold Light', sans-serif;
-    font-size: 32px;
-    line-height: 27px;
-    font-weight: 300;
-    color: #2C2B2B;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-}
-
-.container{
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 10px;
+	80% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
 }
 
 
 
+.nav-link:hover {
+    animation: bounce 1s;
+    color: #3dbe98;
+}
 
-
-
-
-
-
+.navbar-brand:hover {
+    animation: bounce 1s;
+    color: #3dbe98;
+}

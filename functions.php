@@ -18,10 +18,18 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), 'null', true);
 });
 
+add_action('after_setup_theme', 'tahiti_setup');
 
-add_theme_support('post-thumbnails');
-add_theme_support('title-tag');
-add_theme_support('custom-logo');
+add_filter('show_admin_bar', '__return_false');
+
+function tahiti_setup() {
+	register_nav_menu('menu-header', 'Menu header');
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'custom-logo' );
+}
+
+require_once get_template_directory() . '/inc/wp_nav_bootstrap.php';
 
 add_filter( 'upload_mimes', 'svg_upload_allow' );
 
