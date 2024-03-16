@@ -16,7 +16,7 @@
         <nav class="navbar navbar-expand-md mb-4">
 	        <?php the_custom_logo(); ?>
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Hahiti</a>
+                <a class="navbar-brand" href="#"><?php echo wp_get_document_title() ?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,6 +38,20 @@
             </div>
         </nav>
     </div>
+    <section class="hero">
+        <div class="container">
+          
+             <div class="content_container">
+             <div class="row ">
+             <div class="hero_title"><?php the_field('title_hero'); ?></div>
+             </div>
+             <div class="row">
+            <div class="hero_text"><?php the_field('text_hero'); ?></div>
+            </div> 
+        
+    </section>
+
+
 </header>
 
 <?php wp_head(); ?>

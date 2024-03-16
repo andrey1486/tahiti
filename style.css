@@ -68,6 +68,10 @@ a {
   max-width: 1482px;
 }
 
+/*===========================================================
+**************************** NAVBAR *************************
+===========================================================*/
+
 .nav-link {
   font-family: "Gotham Book", sans-serif;
   font-weight: 400;
@@ -77,37 +81,64 @@ a {
 }
 
 .navbar-brand {
-    font-family: "Gotham Book", sans-serif;
-    font-weight: 400;
-    font-size: 40px;
-    color: var(--btn-secondary-bg-color);
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--btn-secondary-bg-color);
 }
 
 @keyframes bounce {
-	0%, 20%, 60%, 100% {
-		transform: translateY(0);
-		transform: translateY(0);
-	}
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
 
-	40% {
-		transform: translateY(-20px);
-		transform: translateY(-20px);
-	}
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
 
-	80% {
-		transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
 
-
-
 .nav-link:hover {
-    animation: bounce 1s;
-    color: #3dbe98;
+  animation: bounce 1s;
+  color: #3dbe98;
 }
 
 .navbar-brand:hover {
-    animation: bounce 1s;
-    color: #3dbe98;
+  animation: bounce 1s;
+  color: #3dbe98;
+}
+
+.content_container {
+  background-image: url("assets/images/welcome.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 700px;
+  /* color: #fff; */
+}
+
+.hero_title {
+  text-align: center;
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #ffff99;
+}
+
+.hero_text {
+  text-align: center;
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color:  #ffff99;
 }
