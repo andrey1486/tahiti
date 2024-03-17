@@ -42,12 +42,12 @@
         <div class="container">
           
              <div class="content_container">
-             <div class="row ">
+    
              <div class="hero_title"><?php the_field('title_hero'); ?></div>
-             </div>
-             <div class="row">
+        
+             
             <div class="hero_text"><?php the_field('text_hero'); ?></div>
-            </div> 
+        
         
     </section>
 
