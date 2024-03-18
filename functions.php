@@ -2,7 +2,7 @@
 
 add_action( 'wp_enqueue_scripts', function() {
 
-	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/assets/css/normalize.css');
+	
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.css');
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
 	wp_enqueue_style( 'fontawesome', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css');

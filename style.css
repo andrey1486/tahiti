@@ -117,17 +117,7 @@ a {
   color: #3dbe98;
 }
 
-.content_container {
-  position: relative;
-  background-image: url("assets/images/welcome.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  min-height: 700px;
-}
-
 .hero_title {
-
   font-family: "Gotham Book", sans-serif;
   font-weight: 700;
   font-size: 3.75rem;
@@ -137,18 +127,46 @@ a {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  color: #ffff99;
+  color: #2f37a5;
 }
 
 .hero_text {
-  text-align: center;
   font-family: "Gotham Book", sans-serif;
   font-weight: 400;
   font-size: 1.875rem;
-  color: #ffff99;
+  color: #2f37a5;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, 150%);
+}
+
+.slide {
+  position: relative;
+  /* background-image: url("assets/images/welcome.jpg"); */
+  /* background-repeat: no-repeat;*/
+  background-size: cover;
+  background-position: top center;
+  min-height: 700px;
+}
+
+.slider_content {
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  min-height: 700px;
+  box-sizing: border-box;
+}
+
+.experience {
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 866px;
+}
+
+.btn_exp {
+  background-color: var(--btn-secondary-bg-color);
 }

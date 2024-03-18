@@ -38,20 +38,20 @@
             </div>
         </nav>
     </div>
-    <section class="hero">
-        <div class="container">
-          
-             <div class="content_container">
-    
-             <div class="hero_title"><?php the_field('title_hero'); ?></div>
-        
-             
-            <div class="hero_text"><?php the_field('text_hero'); ?></div>
-        
-        
-    </section>
 
+    <!-- SLIDER -->
 
-</header>
+    <div class="container slider_content">
+    <div class= "single-item">
+<div class="slide"><img src = "/assets/images/welcome.jpg"></div>
+<div class="slide"><?php the_sub_field('text'); ?><div>
+<div class="slide">3</div>
 
+        </div> 
+       </div>
+      </div>
 <?php wp_head(); ?>
+    
+                </header>
+
+     
