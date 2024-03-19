@@ -1,0 +1,271 @@
+/*
+Theme Name: Tahiti
+Theme URI:
+Author: Andrey Chervonuik
+Author URI: https://wordpress.org
+Description: test task for WHA
+Requires at least: 1.0.0
+Tested up to: 6.4
+Requires PHP: 5.6
+Version: 1.3
+License:
+License URI:
+Text Domain: TAHINI
+Tags:
+*/
+
+:root {
+  --main-bg-color: #fbfbed;
+  --secondary-bg-color: #ffffff;
+  --main-text-color: #f2597f;
+  --secondary-text-color: #ffffff;
+  --btn-bg-color: #3dbe98;
+  --btn-secondary-bg-color: #ee2255;
+  --btn-tertiary-bg-color: #21b6c7;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gotham Bold", sans-serif;
+  src: url("/assets/fonts/Gotham/GothamBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham Book", sans-serif;
+  src: url("/assets/fonts/Gotham/GothamBook.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham Book Italic", sans-serif;
+  src: url("/assets/fonts/Gotham/GothamBookItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham Light", sans-serif;
+  src: url("/assets/fonts/Gotham/GothamLight.woff2") format("woff2");
+}
+
+body {
+  font-family: "Gotham Bold Light", sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 300;
+  color: #2c2b2b;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0;
+}
+
+/*===========================================================
+**************************** NAVBAR *************************
+===========================================================*/
+
+.nav-link {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--btn-secondary-bg-color);
+}
+
+.navbar-brand {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--btn-secondary-bg-color);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.nav-link:hover {
+  animation: bounce 1s;
+  color: #3dbe98;
+}
+
+.navbar-brand:hover {
+  animation: bounce 1s;
+  color: #3dbe98;
+}
+
+.hero_title {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 700;
+  font-size: 3.75rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: #2f37a5;
+}
+
+.hero_text {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #2f37a5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 150%);
+}
+
+.slide {
+  position: relative;
+  /* background-image: url("assets/images/welcome.jpg"); */
+  /* background-repeat: no-repeat;*/
+  background-size: cover;
+  background-position: top center;
+  min-height: 700px;
+}
+
+.slider_content {
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  min-height: 700px;
+  box-sizing: border-box;
+}
+
+.experience {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 866px;
+}
+
+.btn_exp {
+  background-color: var(--btn-secondary-bg-color);
+}
+
+.title_experience h2 {
+  font-family: "Gotham Book", sans-serif;
+  color: var(--btn-secondary-bg-color);
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title_experience {
+  font-family: "Gotham Book", sans-serif;
+  color: var(--btn-secondary-bg-color);
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.sub_title_experience {
+  font-family: "Gotham Light", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--secondary-bg-color);
+}
+
+.text_experience {
+  font-family: "Gotham Book Italic", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--secondary-bg-color);
+}
+
+.btn_exp {
+  position: absolute;
+  top: 1415px;
+  left: 43%;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--secondary-bg-color);
+  border: none;
+  text-align: center;
+  width: 300px;
+  height: 80px;
+}
+
+.why {
+  min-height: 453px;
+}
+
+.why_content {
+  min-height: 237px;
+  min-width: 1482px;
+}
+
+.vacations {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top-center;
+}
+
+.vacations_block {  
+     min-height: 839px;
+}
+
+.btn_vac {
+  position: absolute;
+  top: 2814px;
+  left: 43%;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: var(--btn-bg-color);
+  color: var( --secondary-text-color);
+  border: none;
+  text-align: center;
+  width: 300px;
+  height: 80px;
+}
+
+.title_vacations {
+  font-family: "Gotham Bold", sans-serif;
+  color: var(--secondary-text-color);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.text_vacations {
+  font-family: "Gotham Book", sans-serif;
+  color: var(--secondary-text-color);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.vacations_content {
+ 
+  background: rgb(0 0 0 / 40%);
+  min-height: 458px;
+  max-width: 1230px;
+}
