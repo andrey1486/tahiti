@@ -2,9 +2,9 @@
 
 <?php get_header(); ?>
     <main class="main">
-<div class="container">
 
     <div class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
+    <div class="container">
         <div class="title_experience">
    <h2><?php the_field('title_exp_strong'); ?></h2>
    <h3><?php the_field('title_exp_tahiti'); ?></h3>
@@ -21,9 +21,10 @@
     </div>
 </div>
 
-    <div class="container">
+    
 
         <div class="why">
+        <div class="container">
             <div class="why_content">
             <div class="title_why row"><?php the_field('title_why'); ?></div>
             <div class="title_text row">
@@ -43,9 +44,10 @@
     
 </div>
 
-<div class="container">
+
 
 <div class="vacations" style=" background-image: url(<?php the_field('img_vacations'); ?>);">
+<div class="container">
    <div class="vacations_block">
      <div class="vacations_content mx-auto text-center alighn-center">
 <p class="title_vacations">
@@ -66,5 +68,6 @@
 
 
 </div>
+
 </main>
 <?php get_footer(); ?>

@@ -65,7 +65,7 @@ a {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1482px;
   padding: 0;
 }
 
@@ -142,8 +142,6 @@ a {
 
 .slide {
   position: relative;
-  /* background-image: url("assets/images/welcome.jpg"); */
-  /* background-repeat: no-repeat;*/
   background-size: cover;
   background-position: top center;
   min-height: 700px;
