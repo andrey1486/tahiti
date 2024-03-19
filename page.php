@@ -19,6 +19,7 @@
             <button  class="btn_exp col-2 text-uppercase " type="button">learn more</button>
           
     </div>
+</div>
 
     <div class="container">
 
@@ -46,7 +47,7 @@
 
 <div class="vacations" style=" background-image: url(<?php the_field('img_vacations'); ?>);">
    <div class="vacations_block">
-     <div class="vacations_content mx-auto">
+     <div class="vacations_content mx-auto text-center alighn-center">
 <p class="title_vacations">
      <?php the_field('title_vacations'); ?>
 </p>
@@ -64,5 +65,6 @@
 
 
 
-    </main>
+</div>
+</main>
 <?php get_footer(); ?>

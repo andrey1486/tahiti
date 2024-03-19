@@ -24,6 +24,7 @@ add_filter('show_admin_bar', '__return_false');
 
 function tahiti_setup() {
 	register_nav_menu('menu-header', 'Menu header');
+	register_nav_menu('menu-footer', 'Menu footer'); 
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'custom-logo' );
