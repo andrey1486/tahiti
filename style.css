@@ -65,13 +65,10 @@ a {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1482px;
   padding: 0;
 }
 
-/*===========================================================
-**************************** NAVBAR *************************
-===========================================================*/
 
 .nav-link {
   font-family: "Gotham Book", sans-serif;
@@ -145,8 +142,6 @@ a {
 
 .slide {
   position: relative;
-  /* background-image: url("assets/images/welcome.jpg"); */
-  /* background-repeat: no-repeat;*/
   background-size: cover;
   background-position: top center;
   min-height: 700px;
@@ -222,4 +217,64 @@ a {
 .why_content {
   min-height: 237px;
   min-width: 1482px;
+}
+
+.title_why {
+  font-family: "Gotham Bold", sans-serif;
+  color: var(--btn-secondary-bg-color);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.title_text {
+  font-family: "Gotham Book", sans-serif;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+.vacations {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top-center;
+}
+
+.vacations_block {  
+     min-height: 839px;
+}
+
+.btn_vac {
+  position: absolute;
+  top: 2814px;
+  left: 43%;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: var(--btn-bg-color);
+  color: var( --secondary-text-color);
+  border: none;
+  text-align: center;
+  width: 300px;
+  height: 80px;
+}
+
+.title_vacations {
+  font-family: "Gotham Bold", sans-serif;
+  color: var(--secondary-text-color);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.text_vacations {
+  font-family: "Gotham Book", sans-serif;
+  color: var(--secondary-text-color);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.vacations_content {
+  background: rgb(0 0 0 / 40%);
+  min-height: 458px;
+  max-width: 1230px;
 }

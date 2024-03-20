@@ -2,8 +2,9 @@
 
 <?php get_header(); ?>
     <main class="main">
-<div class="container">
+
     <div class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
+    <div class="container">
         <div class="title_experience">
    <h2><?php the_field('title_exp_strong'); ?></h2>
    <h3><?php the_field('title_exp_tahiti'); ?></h3>
@@ -18,8 +19,12 @@
             <button  class="btn_exp col-2 text-uppercase " type="button">learn more</button>
           
     </div>
-    <div class="container">
+</div>
+
+    
+
         <div class="why">
+        <div class="container">
             <div class="why_content">
             <div class="title_why row"><?php the_field('title_why'); ?></div>
             <div class="title_text row">
@@ -39,5 +44,30 @@
     
 </div>
 
-    </main>
+
+
+<div class="vacations" style=" background-image: url(<?php the_field('img_vacations'); ?>);">
+<div class="container">
+   <div class="vacations_block">
+     <div class="vacations_content mx-auto text-center alighn-center">
+<p class="title_vacations">
+     <?php the_field('title_vacations'); ?>
+</p>
+<p class="text_vacations">
+     <?php the_field('text_vacations'); ?>
+</p>
+
+     <button  class="btn_vac col-2 text-uppercase " type="button">book now</button>
+
+   </div>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+</main>
 <?php get_footer(); ?>
