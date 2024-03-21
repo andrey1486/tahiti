@@ -13,16 +13,15 @@
 <header class="header">
     <div class="container">
 
-        <nav class="navbar navbar-expand-md mb-4">
+        <nav class="navbar navbar-expand-md">
 	        <?php the_custom_logo(); ?>
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><?php echo wp_get_document_title() ?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    </ul>
+                <div class="justify-content-end" id="navbarCollapse">
+                   
                    <?php
 				    wp_nav_menu(array(
 					    'theme_location' => 'menu-header',

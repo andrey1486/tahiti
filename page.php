@@ -3,6 +3,29 @@
 <?php get_header(); ?>
     <main class="main">
 
+    <div class="discover">
+        <div class="container">
+            <div class="row">
+                   <p>DISCOVER tahiti</p> 
+                   <p>Just pick your destination. Our travel experts will take care of the rest.</p> 
+            </div>
+            <div class="row">
+                <div class="col-3">
+                <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+ 
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
     <div class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
     <div class="container">
         <div class="title_experience">
