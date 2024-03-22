@@ -3,7 +3,7 @@
 <div class="container">
 <div class="row">
 	
-        <nav class="navbar navbar-expand-md mb-4">
+        <nav class="navbar navbar-expand-md mb-2">
 	        <?php the_custom_logo(); ?>
 
             <div class="container-fluid">
@@ -28,11 +28,11 @@
 <?php
               if( have_rows('social') ):
 	echo '<div class="d-flex flex-row mb-3 social my-4">';
-	echo '<ul class="social_nav  d-flex align-middle">';
+	echo '<ul class="social_nav  d-flex">';
 	while ( have_rows('social' ) ) : the_row();
 		$socialchannel = get_sub_field('social_channel');
 		$socialurl = get_sub_field('social_url' );
-		echo '<li class="social_item">';
+		echo '<li class="social_item d-flex mx-3">';
 		echo '<a class="social_link" rel="nofollow noopener noreferrer" href="' . $socialurl . '" target="_blank">';
 		echo '<i class="fa fa-' . $socialchannel . '" aria-hidden="true"></i>';
 		echo '<span class="sr-only hidden">' . ucfirst($socialchannel) . '</span>';

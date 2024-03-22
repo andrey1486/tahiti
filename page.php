@@ -14,23 +14,25 @@
                 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">BORA BORA</h5>
+    <p class="card-text">Surrounded by sand-fringed motus  and a turquoise lagoon protected by a coral reef, Bora Bora is known...</p>
+    <a href="#" class="btn btn-primary">From</a>
   </div>
 </div>
  
-            <div class="row">
-
-            </div>
+</div>
+</div>  
         </div>
-    </div>
+</div>
+ 
+
 
     <div class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
     <div class="container">
-        <div class="title_experience">
-   <h2><?php the_field('title_exp_strong'); ?></h2>
-   <h3><?php the_field('title_exp_tahiti'); ?></h3>
+        <div class="title_experience d-flex">
+   <p class="title_exp_strong"><?php the_field('title_exp_strong'); ?></p>
+   &nbsp
+   <p class = "title_exp_tahiti"><?php the_field('title_exp_tahiti'); ?></p>
         </div>
         <div class="row ">
         <p class="sub_title_experience"><?php the_field('sub_title_experience'); ?></p>
@@ -49,7 +51,7 @@
         <div class="why">
         <div class="container">
             <div class="why_content">
-            <div class="title_why row"><?php the_field('title_why'); ?></div>
+            <div class="title_why d-flex"><?php the_field('title_why'); ?></div>
             <div class="title_text row">
              <div class="col-3">
              <?php the_field('why_text_left'); ?>
@@ -64,15 +66,12 @@
         </div>
         </div>
     </div>
+
     
-</div>
-
-
-
 <div class="vacations" style=" background-image: url(<?php the_field('img_vacations'); ?>);">
 <div class="container">
    <div class="vacations_block">
-     <div class="vacations_content mx-auto text-center alighn-center">
+     <div class="vacations_content mx-auto text-center alighn-center ">
 <p class="title_vacations">
      <?php the_field('title_vacations'); ?>
 </p>
@@ -85,10 +84,7 @@
    </div>
 </div>
 
-
 </div>
-
-
 
 </div>
 

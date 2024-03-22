@@ -65,10 +65,10 @@ a {
 }
 
 .container {
+  position: relative;
   max-width: 1482px;
-  padding: 0;
+  /* padding: 0; */
 }
-
 
 .nav-link {
   font-family: "Gotham Book", sans-serif;
@@ -157,7 +157,7 @@ a {
 
 .discover {
   background: rgba(235, 237, 164, 0.2);
-  min-height: 1080px;
+  min-height: 1058px;
 }
 
 .experience {
@@ -167,11 +167,12 @@ a {
   min-height: 866px;
 }
 
-.btn_exp {
-  background-color: var(--btn-secondary-bg-color);
+.title_experience {
+  padding-top: 110px;
+  margin-bottom: 20px;
 }
 
-.title_experience h2 {
+.title_exp_strong {
   font-family: "Gotham Book", sans-serif;
   color: var(--btn-secondary-bg-color);
   font-size: 40px;
@@ -179,7 +180,7 @@ a {
   font-weight: 700;
 }
 
-.title_experience {
+.title_exp_tahiti {
   font-family: "Gotham Book", sans-serif;
   color: var(--btn-secondary-bg-color);
   font-size: 40px;
@@ -192,6 +193,7 @@ a {
   font-weight: 400;
   font-size: 18px;
   color: var(--secondary-bg-color);
+  margin-bottom: 399px;
 }
 
 .text_experience {
@@ -199,16 +201,18 @@ a {
   font-style: italic;
   font-size: 18px;
   color: var(--secondary-bg-color);
+  margin-bottom: 30px;
 }
 
 .btn_exp {
   position: absolute;
-  top: 1415px;
+  /* top: 1415px; */
   left: 43%;
   font-family: "Gotham Book", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--secondary-bg-color);
+  background-color: var(--btn-secondary-bg-color);
   border: none;
   text-align: center;
   width: 300px;
@@ -229,6 +233,10 @@ a {
   color: var(--btn-secondary-bg-color);
   font-size: 40px;
   font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 101px;
+  margin-bottom: 50px;
+  justify-content: center;
 }
 
 .title_text {
@@ -236,28 +244,28 @@ a {
   color: #333333;
   font-size: 18px;
   font-weight: 300;
+  justify-content: center;
 }
-
 
 .vacations {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top-center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top-center;
 }
 
-.vacations_block {  
-     min-height: 839px;
+.vacations_block {
+  min-height: 839px;
 }
 
 .btn_vac {
   position: absolute;
-  top: 2814px;
+  /* top: 2814px; */
   left: 43%;
   font-family: "Gotham Book", sans-serif;
   font-size: 18px;
   font-weight: 700;
   background-color: var(--btn-bg-color);
-  color: var( --secondary-text-color);
+  color: var(--secondary-text-color);
   border: none;
   text-align: center;
   width: 300px;
@@ -269,6 +277,7 @@ a {
   color: var(--secondary-text-color);
   font-size: 40px;
   font-weight: 700;
+  padding-top: 98px;
 }
 
 .text_vacations {
@@ -276,14 +285,15 @@ a {
   color: var(--secondary-text-color);
   font-size: 18px;
   font-weight: 300;
+  margin-bottom: 43px;
 }
 
 .vacations_content {
+  padding-top: 40px;
   background: rgb(0 0 0 / 40%);
   min-height: 458px;
   max-width: 1230px;
 }
-
 
 /*footer*/
 
@@ -292,4 +302,12 @@ a {
   font-weight: 300;
   font-size: 18px;
   color: var(--btn-secondary-bg-color);
+}
+
+social_item {
+}
+
+.social_link:hover {
+  animation: bounce 1s;
+  color: #3dbe98;
 }
