@@ -70,12 +70,17 @@ a {
   /* padding: 0; */
 }
 
+.navbar {
+  min-height: 9.375rem;
+}
+
 .nav-link {
   font-family: "Gotham Book", sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
   text-transform: uppercase;
   color: var(--btn-secondary-bg-color);
+  padding-left: 6.063rem !important;
 }
 
 .navbar-brand {
@@ -85,6 +90,9 @@ a {
   color: var(--btn-secondary-bg-color);
 }
 
+.nav_ul {
+  gap: 97px;
+}
 @keyframes bounce {
   0%,
   20%,
@@ -155,6 +163,15 @@ a {
   box-sizing: border-box;
 }
 
+.discover {
+  padding-top: 6.875rem;
+  padding-bottom: 6.188rem;
+}
+
+.cards {
+  margin-bottom: 6.25rem;
+}
+
 .island-card {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.3s;
@@ -168,8 +185,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 208px;
-  
+  height: 13rem;
 }
 
 .island-thumb img {
@@ -226,15 +242,51 @@ a {
   min-height: 1058px;
 }
 
+.title_dis_strong {
+  font-family: "Gotham Book", sans-serif;
+  color: var(--btn-bg-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title_dis_tahiti {
+  font-family: "Gotham Book", sans-serif;
+  color: var(--btn-bg-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.sub_title_discover {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 3.813rem;
+}
+
+.title_discover {
+  margin-bottom: 1.25rem;
+}
+
+.text_discover {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgba(51, 51, 51, 0.6);
+  margin-bottom: 3.813rem;
+}
+
 .experience {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  min-height: 866px;
+  min-height: 54.125rem;
 }
 
 .title_experience {
-  padding-top: 110px;
+  padding-top: 6.875rem;
   margin-bottom: 1.25rem;
 }
 
@@ -259,7 +311,7 @@ a {
   font-weight: 400;
   font-size: 1.1rem;
   color: var(--secondary-bg-color);
-  margin-bottom: 399px;
+  margin-bottom: 24.938rem;
 }
 
 .text_experience {
@@ -320,7 +372,9 @@ a {
 }
 
 .vacations_block {
-  min-height: 839px;
+  position: relative;
+  min-height: 52.438rem;
+  padding: 195px 30px;
 }
 
 .btn_vac {
@@ -355,10 +409,9 @@ a {
 }
 
 .vacations_content {
-  padding-top: 2.5rem;
   background: rgb(0 0 0 / 40%);
-  min-height: 458px;
-  max-width: 1230px;
+  min-height: 28.125rem;
+  max-width: 76.875rem;
 }
 
 /*footer*/

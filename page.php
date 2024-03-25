@@ -7,22 +7,34 @@
         <div class="container">
 
 		<div class="title_discover d-flex">
-   <p class="title_dis_strong"><?php the_field('title_exp_strong'); ?></p>
+   <p class="title_dis_strong"><?php the_field('title_dis_strong'); ?></p>
    &nbsp
-   <p class="title_dis_tahiti"><?php the_field('title_exp_tahiti'); ?></p>
+   <p class="title_dis_tahiti"><?php the_field('title_dis_tahiti'); ?></p>
         </div>
         <div class="row ">
-        <p class="sub_title_discover"><?php the_field('sub_title_experience'); ?></p>
+        <p class="sub_title_discover"><?php the_field('sub_title_discover'); ?></p>
         </div>
 
-			<div class="row">
+			<div class="row cards">
+                <?php
+                     $args = array(
+                        'post_type' => 'islands',
+                        'posts_per_page' => -1,
+                     );
+
+                     $p = get_posts($args);
+                     foreach ($p as $posts) {
+                        setup_postdata($post);
+                        ?>
+
+
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="island-card">
 						<div class="island-thumb">
 							<a href="#"><img src="<?php the_field('image_island'); ?>"></a>
 						</div>
 						<div class="island-details">
-							<h4><a href="#"><?php the_title() ?></a></h4>
+							<h4><a href="#"><?php the_title() ?></a><</h4>
 							<p><?php the_excerpt(); ?></p>
 							
 							</div>
@@ -38,10 +50,18 @@
 					</div>
 				</div>
 
-				
-
-		
+                <?php
+             }
+              wp_reset_postdata( $post );
+              ?>
+	
 			</div>
+            <div class="row text-center">
+                <p class="text_discover">
+                <?php the_field('text_discover'); ?>
+                </p>
+            </div>
+
 		</div>
 	</section>
        
@@ -49,7 +69,7 @@
  
 
 
-    <section class="experience" style=" background-image: url(<?php the_field('title_exp_tahiti'); ?>);">
+    <section class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
     <div class="container">
         <div class="title_experience d-flex">
    <p class="title_exp_strong"><?php the_field('title_exp_strong'); ?></p>
@@ -90,7 +110,7 @@
     
 <section class="vacations" style=" background-image: url(<?php the_field('img_vacations'); ?>);">
 <div class="container">
-   <div class="vacations_block">
+   <div class="vacations_block ">
      <div class="vacations_content mx-auto text-center alighn-center ">
 <p class="title_vacations">
      <?php the_field('title_vacations'); ?>

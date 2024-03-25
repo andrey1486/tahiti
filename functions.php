@@ -56,7 +56,7 @@ function islands_register_types(){
             'new_item_name'     => 'Add island',
             'menu_name'         => 'All islands',
         ],
-        'description'           => 'Categories',
+        'description'           => 'Category',
         'public'                => true,
         'hierarchical'          => true,
         'show_ui'               => true,
@@ -66,8 +66,8 @@ function islands_register_types(){
    
 ]);
 
-    register_post_type( 'islands', [
-        'labels' => [
+    register_post_type( 'islands', array(
+        'labels'                 => array( 
             'name'               => 'Islands', 
             'singular_name'      => 'Island', 
             'add_new'            => 'Add island', 
@@ -79,7 +79,7 @@ function islands_register_types(){
             'not_found_in_trash' => 'Not found in trash', 
             'parent_item_colon'  => '', 
             'menu_name'          => 'Islands', 
-        ],
+        ),
         'public'              => true,
         'show_ui'             => true,                           
         'menu_position'       => 20,
@@ -87,7 +87,7 @@ function islands_register_types(){
         'hierarchical'        => false,
         'supports'            => ['title','excerpt'],
         'has_archive' => false,
-    ]);
+    ));
 
 }
 
