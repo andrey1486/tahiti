@@ -52,7 +52,7 @@ Tags:
 
 body {
   font-family: "Gotham Bold Light", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 27px;
   font-weight: 300;
   color: #2c2b2b;
@@ -73,7 +73,7 @@ a {
 .nav-link {
   font-family: "Gotham Book", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.1rem;
   text-transform: uppercase;
   color: var(--btn-secondary-bg-color);
 }
@@ -81,7 +81,7 @@ a {
 .navbar-brand {
   font-family: "Gotham Book", sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: var(--btn-secondary-bg-color);
 }
 
@@ -95,8 +95,8 @@ a {
   }
 
   40% {
-    transform: translateY(-20px);
-    transform: translateY(-20px);
+    transform: translateY(-1.25rem);
+    transform: translateY(-1.25rem);
   }
 
   80% {
@@ -149,10 +149,76 @@ a {
 
 .slider_content {
   margin: auto;
-  padding: 30px;
+  padding: 1.875rem;
   width: 100%;
   min-height: 700px;
   box-sizing: border-box;
+}
+
+.island-card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
+}
+
+.island-card:hover {
+  box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+}
+
+.island-thumb a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 208px;
+  
+}
+
+.island-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.island-details {
+  padding: 1.25rem;
+}
+
+.island-details h4 a {
+  font-weight: 500;
+  display: block;
+  height: 60px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.island-details p {
+  font-size: 15px;
+  margin-bottom: 1.25rem;
+  color: #999;
+  overflow: hidden;
+}
+
+.island-bottom-details {
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  padding-top: 1.25rem;
+  background-color: var(--btn-bg-color);
+  font-size: 1.125rem;
+}
+
+.island-price {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+  font-weight: 400;
+}
+
+.island-price small {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  margin-right: 5px;
+}
+
+.island-links a {
+  font-size: 1.25rem;
+  margin-left: 10px;
 }
 
 .discover {
@@ -169,13 +235,13 @@ a {
 
 .title_experience {
   padding-top: 110px;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .title_exp_strong {
   font-family: "Gotham Book", sans-serif;
   color: var(--btn-secondary-bg-color);
-  font-size: 40px;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -183,7 +249,7 @@ a {
 .title_exp_tahiti {
   font-family: "Gotham Book", sans-serif;
   color: var(--btn-secondary-bg-color);
-  font-size: 40px;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -191,7 +257,7 @@ a {
 .sub_title_experience {
   font-family: "Gotham Light", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: var(--secondary-bg-color);
   margin-bottom: 399px;
 }
@@ -199,9 +265,9 @@ a {
 .text_experience {
   font-family: "Gotham Book Italic", sans-serif;
   font-style: italic;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: var(--secondary-bg-color);
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .btn_exp {
@@ -209,7 +275,7 @@ a {
   /* top: 1415px; */
   left: 43%;
   font-family: "Gotham Book", sans-serif;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--secondary-bg-color);
   background-color: var(--btn-secondary-bg-color);
@@ -231,7 +297,7 @@ a {
 .title_why {
   font-family: "Gotham Bold", sans-serif;
   color: var(--btn-secondary-bg-color);
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
   padding-top: 101px;
@@ -242,7 +308,7 @@ a {
 .title_text {
   font-family: "Gotham Book", sans-serif;
   color: #333333;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 300;
   justify-content: center;
 }
@@ -262,7 +328,7 @@ a {
   /* top: 2814px; */
   left: 43%;
   font-family: "Gotham Book", sans-serif;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 700;
   background-color: var(--btn-bg-color);
   color: var(--secondary-text-color);
@@ -275,7 +341,7 @@ a {
 .title_vacations {
   font-family: "Gotham Bold", sans-serif;
   color: var(--secondary-text-color);
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   padding-top: 98px;
 }
@@ -283,13 +349,13 @@ a {
 .text_vacations {
   font-family: "Gotham Book", sans-serif;
   color: var(--secondary-text-color);
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 300;
   margin-bottom: 43px;
 }
 
 .vacations_content {
-  padding-top: 40px;
+  padding-top: 2.5rem;
   background: rgb(0 0 0 / 40%);
   min-height: 458px;
   max-width: 1230px;
@@ -300,7 +366,7 @@ a {
 .menu_footer_link {
   font-family: "Gotham Light", sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: var(--btn-secondary-bg-color);
 }
 

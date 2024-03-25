@@ -3,31 +3,53 @@
 <?php get_header(); ?>
     <main class="main">
 
-    <div class="discover">
+    <section class="discover">
         <div class="container">
-            <div class="row">
-                   <p>DISCOVER tahiti</p> 
-                   <p>Just pick your destination. Our travel experts will take care of the rest.</p> 
-            </div>
-            <div class="row">
-                <div class="col-3">
-                <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">BORA BORA</h5>
-    <p class="card-text">Surrounded by sand-fringed motus  and a turquoise lagoon protected by a coral reef, Bora Bora is known...</p>
-    <a href="#" class="btn btn-primary">From</a>
-  </div>
-</div>
- 
-</div>
-</div>  
+
+		<div class="title_discover d-flex">
+   <p class="title_dis_strong"><?php the_field('title_exp_strong'); ?></p>
+   &nbsp
+   <p class="title_dis_tahiti"><?php the_field('title_exp_tahiti'); ?></p>
         </div>
-</div>
+        <div class="row ">
+        <p class="sub_title_discover"><?php the_field('sub_title_experience'); ?></p>
+        </div>
+
+			<div class="row">
+				<div class="col-lg-3 col-sm-6 mb-3">
+					<div class="island-card">
+						<div class="island-thumb">
+							<a href="#"><img src="<?php the_field('image_island'); ?>"></a>
+						</div>
+						<div class="island-details">
+							<h4><a href="#"><?php the_title() ?></a></h4>
+							<p><?php the_excerpt(); ?></p>
+							
+							</div>
+							<div class="island-bottom-details d-flex justify-content-between">
+								<div class="island-price">
+									<small>FROM</small>
+									<p class="price"><?php the_field('price'); ?></p> 
+								</div>
+								<div class="island-links">
+									<a href="#"><i class="far fa-heart"></i></a>
+								</div>
+						</div>
+					</div>
+				</div>
+
+				
+
+		
+			</div>
+		</div>
+	</section>
+       
+</section>
  
 
 
-    <div class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
+    <section class="experience" style=" background-image: url(<?php the_field('title_exp_tahiti'); ?>);">
     <div class="container">
         <div class="title_experience d-flex">
    <p class="title_exp_strong"><?php the_field('title_exp_strong'); ?></p>
@@ -37,22 +59,20 @@
         <div class="row ">
         <p class="sub_title_experience"><?php the_field('sub_title_experience'); ?></p>
         </div>
-        <div class="row text-center">
+        <div class="row text-center d-flex">
         <p class="text_experience"><?php the_field('text_experience'); ?></p>
           </div>
           
             <button  class="btn_exp col-2 text-uppercase " type="button">learn more</button>
           
     </div>
-</div>
+</section>
 
-    
-
-        <div class="why">
+            <section class="why">
         <div class="container">
             <div class="why_content">
             <div class="title_why d-flex"><?php the_field('title_why'); ?></div>
-            <div class="title_text row">
+            <div class="title_text d-flex">
              <div class="col-3">
              <?php the_field('why_text_left'); ?>
              </div>
@@ -65,10 +85,10 @@
             </div>
         </div>
         </div>
-    </div>
+    </section>
 
     
-<div class="vacations" style=" background-image: url(<?php the_field('img_vacations'); ?>);">
+<section class="vacations" style=" background-image: url(<?php the_field('img_vacations'); ?>);">
 <div class="container">
    <div class="vacations_block">
      <div class="vacations_content mx-auto text-center alighn-center ">
@@ -86,7 +106,7 @@
 
 </div>
 
-</div>
+</section>
 
 </main>
 <?php get_footer(); ?>

@@ -10,9 +10,7 @@
                 <a class="navbar-brand" href="#"><?php echo wp_get_document_title() ?>
 			</a>
                 <div class="collapse navbar-collapse  id="navbarCollapse">
-				
-	 
-                    
+				                    
                    <?php
 				    wp_nav_menu(array(
 					    'theme_location' => 'menu-footer',
@@ -24,7 +22,6 @@
 					    'walker' => new bootstrap_5_wp_nav_menu_walker()
 				    ));
 				    ?>
-
 <?php
               if( have_rows('social') ):
 	echo '<div class="d-flex flex-row mb-3 social my-4">';
@@ -32,9 +29,10 @@
 	while ( have_rows('social' ) ) : the_row();
 		$socialchannel = get_sub_field('social_channel');
 		$socialurl = get_sub_field('social_url' );
+		$color_social = get_sub_field('color_social' );
 		echo '<li class="social_item d-flex mx-3">';
 		echo '<a class="social_link" rel="nofollow noopener noreferrer" href="' . $socialurl . '" target="_blank">';
-		echo '<i class="fa fa-' . $socialchannel . '" aria-hidden="true"></i>';
+		echo '<i class="fa-brands fa-' . $socialchannel . '" style="font-size:2.5rem; color: ' . $color_social . '";></i>';
 		echo '<span class="sr-only hidden">' . ucfirst($socialchannel) . '</span>';
 			echo '</a></li>';
 	endwhile;
@@ -43,6 +41,8 @@
 endif;
 
 ?> 
+
+
                 </div>
 				</div>
 				</div>
@@ -52,7 +52,7 @@ endif;
 				
                 <div class="container">
 				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-5  justify-content-md-center">
-   
+				
                 <div class="col-3 mb-4">
 					<?php
 				    wp_nav_menu(array(
@@ -100,7 +100,8 @@ endif;
         </nav>
         </div>
       
-    
+		
+		
 
 </div>
 
