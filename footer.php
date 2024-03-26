@@ -6,7 +6,7 @@
         <nav class="navbar navbar-expand-md mb-2">
 	        <?php the_custom_logo(); ?>
 
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand" href="#"><?php echo wp_get_document_title() ?>
 			</a>
                 <div class="collapse navbar-collapse  id="navbarCollapse">
@@ -53,7 +53,7 @@ endif;
                 <div class="container">
 				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-5  justify-content-md-center">
 				
-                <div class="col-3 mb-4">
+                <div class="col-4">
 					<?php
 				    wp_nav_menu(array(
 					    'theme_location' => 'menu-footer-col-left',
@@ -67,7 +67,7 @@ endif;
 				    ?>
 					</div>
 			
-					<div class="col-3">
+					<div class="col-4">
 					<?php
 				    wp_nav_menu(array(
 					    'theme_location' => 'menu-footer-col-center',
@@ -81,7 +81,7 @@ endif;
 				    ?>
 					</div>
 		
-				<div class="col-3">
+				<div class="col-4">
 					<?php
 				    wp_nav_menu(array(
 					    'theme_location' => 'menu-footer-col-right',

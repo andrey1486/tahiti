@@ -61,7 +61,7 @@ function islands_register_types(){
         'hierarchical'          => true,
         'show_ui'               => true,
         'hierarchical'          => true,
-        'rewrite'               => array('slug' =>'islands', 'hierarchical'=>false, 'with_front'=>false, 'feed'=>false),
+        'rewrite'               => true,
         'show_admin_column'     => true,
    
 ]);
@@ -85,7 +85,7 @@ function islands_register_types(){
         'menu_position'       => 20,
         'menu_icon'           => 'dashicons-palmtree', 
         'hierarchical'        => false,
-        'supports'            => ['title','excerpt'],
+        'supports'            => ['title','excerpt', 'thumbnail'],
         'has_archive' => false,
     ));
 

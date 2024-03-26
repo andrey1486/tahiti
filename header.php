@@ -39,18 +39,36 @@
     </div>
 
     <!-- SLIDER -->
-
-    <div class="container slider_content">
-    <div class= "single-item">
-<div class="slide"><img src = "/assets/images/welcome.jpg"></div>
-<div class="slide"><?php the_sub_field('text'); ?><div>
-<div class="slide">3</div>
-
-        </div> 
-       </div>
-      </div>
-<?php wp_head(); ?>
+    <section class= "slider_content">
+        
     
-                </header>
+    <?php
+
+if( have_rows('slider') ):
+
+ 
+    while ( have_rows('slider') ) : the_row();
+  
+   
+    $image = get_sub_field('img_slide'); 
+    ?>
+	<div class="slick-slider" style=" background-image: url(<?php echo $image['url']; ?>);">
+    <div class="caption_slider">
+    <h1><?php the_sub_field('title')?></h1>
+    <p class="slide_text"> <?php the_sub_field('text')?></p>
+    </div>
+    <?php      
+    endwhile;
+
+endif;
+
+?>
+
+</div>
+</section>
+
+     <?php wp_head(); ?>
+     
+    </header>
 
      

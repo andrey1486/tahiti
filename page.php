@@ -19,7 +19,7 @@
                 <?php
                      $args = array(
                         'post_type' => 'islands',
-                        'posts_per_page' => -1,
+                        'posts_per_page' => 10,
                      );
 
                      $p = get_posts($args);
@@ -31,20 +31,20 @@
 				<div class="col-lg-3 col-sm-6 mb-3">
 					<div class="island-card">
 						<div class="island-thumb">
-							<a href="#"><img src="<?php the_field('image_island'); ?>"></a>
+							<a href="#"><img src="<?php echo get_field('image_island')['url']; ?>"></a>
 						</div>
 						<div class="island-details">
-							<h4><a href="#"><?php the_title() ?></a><</h4>
-							<p><?php the_excerpt(); ?></p>
+							<h4><a href="#"><?php the_title(); ?></a></h4>
+							<p><?php the_field('sub_title_discover'); ?></p>
 							
 							</div>
-							<div class="island-bottom-details d-flex justify-content-between">
-								<div class="island-price">
+							<div class="island-bottom-details d-flex justify-content-between align-items-center m-0">
+								<div class="island-price d-flex">
 									<small>FROM</small>
-									<p class="price"><?php the_field('price'); ?></p> 
+									<span class="price"><?php the_field('price'); ?></span> 
 								</div>
 								<div class="island-links">
-									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fa fa-arrow-right" style="color: white;"></i></a>
 								</div>
 						</div>
 					</div>

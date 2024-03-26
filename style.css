@@ -53,7 +53,7 @@ Tags:
 body {
   font-family: "Gotham Bold Light", sans-serif;
   font-size: 1rem;
-  line-height: 27px;
+  line-height: 1.688rem;
   font-weight: 300;
   color: #2c2b2b;
 }
@@ -88,11 +88,9 @@ a {
   font-weight: 400;
   font-size: 2.5rem;
   color: var(--btn-secondary-bg-color);
+  padding-right: px;
 }
 
-.nav_ul {
-  gap: 97px;
-}
 @keyframes bounce {
   0%,
   20%,
@@ -147,20 +145,40 @@ a {
   margin-right: -50%;
   transform: translate(-50%, 150%);
 }
-
-.slide {
-  position: relative;
+ 
+.slick-slider {
+  min-height: 930px;
   background-size: cover;
-  background-position: top center;
-  min-height: 700px;
+  background-repeat: no-repeat;
 }
 
-.slider_content {
-  margin: auto;
-  padding: 1.875rem;
-  width: 100%;
-  min-height: 700px;
-  box-sizing: border-box;
+.caption_slider {
+
+}
+
+h1 {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 700;
+  font-size: 3.75rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -150%);
+  color: white;
+}
+
+.slide_text {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 .discover {
@@ -173,6 +191,7 @@ a {
 }
 
 .island-card {
+  min-height: 448px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.3s;
 }
@@ -198,24 +217,27 @@ a {
 }
 
 .island-details h4 a {
-  font-weight: 500;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
   display: block;
+  color: var(--btn-bg-color);
   height: 60px;
   overflow: hidden;
-  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .island-details p {
-  font-size: 15px;
+  font-size: 18px;
   margin-bottom: 1.25rem;
-  color: #999;
+  color: #333333;
   overflow: hidden;
 }
 
 .island-bottom-details {
   overflow: hidden;
   border-top: 1px solid #eee;
-  padding-top: 1.25rem;
+  padding: 20px;
   background-color: var(--btn-bg-color);
   font-size: 1.125rem;
 }
@@ -229,7 +251,10 @@ a {
 .island-price small {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
-  margin-right: 5px;
+  margin-right: 13px;
+}
+
+h4 {
 }
 
 .island-links a {
@@ -239,7 +264,7 @@ a {
 
 .discover {
   background: rgba(235, 237, 164, 0.2);
-  min-height: 1058px;
+  min-height: 1050px;
 }
 
 .title_dis_strong {
@@ -416,17 +441,31 @@ a {
 
 /*footer*/
 
-.menu_footer_link {
+/* .menu_footer_link {
   font-family: "Gotham Light", sans-serif;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--btn-secondary-bg-color);
-}
-
-social_item {
-}
+} */
 
 .social_link:hover {
   animation: bounce 1s;
   color: #3dbe98;
+}
+/* 
+button:hover {
+    box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+  }
+}
+ */
+
+button:hover {
+  background: #09db95;
+  transform: translate(0, 0.25em);
+  transition-duration: 0.6s;
+}
+button:hover::before {
+  box-shadow: 0 0 0 2px #7badee, 0 0.5em 0 0 #b811c7;
+  transform: translate3d(0, 0.5em, -1em);
+  transition-duration: 0.4s;
 }
