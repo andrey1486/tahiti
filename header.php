@@ -13,16 +13,15 @@
 <header class="header">
     <div class="container">
 
-        <nav class="navbar navbar-expand-md mb-4">
+        <nav class="navbar navbar-expand-md">
 	        <?php the_custom_logo(); ?>
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><?php echo wp_get_document_title() ?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    </ul>
+                <div class="nav_ul  justify-content-end" id="navbarCollapse">
+                   
                    <?php
 				    wp_nav_menu(array(
 					    'theme_location' => 'menu-header',
@@ -40,18 +39,32 @@
     </div>
 
     <!-- SLIDER -->
-
-    <div class="container slider_content">
-    <div class= "single-item">
-<div class="slide"><img src = "/assets/images/welcome.jpg"></div>
-<div class="slide"><?php the_sub_field('text'); ?><div>
-<div class="slide">3</div>
-
-        </div> 
-       </div>
-      </div>
-<?php wp_head(); ?>
+    <section class= "slider_content">
+        
     
-                </header>
+    <?php if( have_rows('slider') ): while ( have_rows('slider') ) : the_row('slider');
+  
+   
+    $image = get_sub_field('img_slide'); 
+    ?>
+    
+	<div class="slick-slider" style=" background-image: url(<?php echo $image['url']; ?>);">
+    <div class="caption_slider">
+    <h1><?php the_sub_field('title')?></h1>
+    <p class="slide_text"> <?php the_sub_field('text')?></p>
+    </div>
+    <?php      
+  
+    endwhile;
+   
+endif;
+
+?>
+
+</div>
+</section>
+
+     
+    </header>
 
      

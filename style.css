@@ -52,10 +52,11 @@ Tags:
 
 body {
   font-family: "Gotham Bold Light", sans-serif;
-  font-size: 16px;
-  line-height: 27px;
+  font-size: 1rem;
+  line-height: 1.688rem;
   font-weight: 300;
   color: #2c2b2b;
+  letter-spacing: 1px;
 }
 
 a {
@@ -65,24 +66,32 @@ a {
 }
 
 .container {
+  position: relative;
   max-width: 1482px;
-  padding: 0;
+  /* padding: 0; */
 }
 
+.navbar {
+  min-height: 9.375rem;
+}
 
 .nav-link {
   font-family: "Gotham Book", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.1rem;
   text-transform: uppercase;
   color: var(--btn-secondary-bg-color);
+  padding-left: 68px!important;
+  padding-right: 0px!important;
+  letter-spacing: 2px;
 }
 
 .navbar-brand {
   font-family: "Gotham Book", sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: var(--btn-secondary-bg-color);
+  padding-right: px;
 }
 
 @keyframes bounce {
@@ -95,8 +104,8 @@ a {
   }
 
   40% {
-    transform: translateY(-20px);
-    transform: translateY(-20px);
+    transform: translateY(-1.25rem);
+    transform: translateY(-1.25rem);
   }
 
   80% {
@@ -140,44 +149,208 @@ a {
   transform: translate(-50%, 150%);
 }
 
-.slide {
-  position: relative;
+.slick-slider {
+  min-height: 930px;
   background-size: cover;
-  background-position: top center;
-  min-height: 700px;
+  background-repeat: no-repeat;
 }
 
-.slider_content {
-  margin: auto;
-  padding: 30px;
-  width: 100%;
-  min-height: 700px;
-  box-sizing: border-box;
+.caption_slider {
+
+}
+
+h1 {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 700;
+  font-size: 3.75rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -100%);
+  color: white;
+}
+
+.slide_text {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 140%);
+}
+
+.discover {
+  padding-top: 6.875rem;
+  padding-bottom: 6.188rem;
+}
+
+.cards {
+  margin-bottom: 5.2rem;
+}
+
+.island-card {
+  min-height: 448px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
+}
+
+.island-card:hover {
+  box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+}
+
+.island-thumb a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 13rem;
+}
+
+.island-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.island-details {
+  padding: 1.25rem 1.25rem 0 1.25rem;
+}
+
+.island-details h4 a {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  display: block;
+  color: var(--btn-bg-color);
+  overflow: hidden;
+  text-transform: uppercase;
+  margin-bottom: ;
+}
+
+.island-details p {
+  font-size: 18px;
+  color: #333333;
+  overflow: hidden;
+  margin-bottom: 9px;
+}
+
+.island-bottom-details {
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  padding: 20px;
+  background-color: var(--btn-bg-color);
+  font-size: 1.125rem;
+}
+
+.island-price {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+  font-weight: 400;
+}
+
+.island-price small {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  margin-right: 13px;
+}
+
+.island-links a {
+  font-size: 1.25rem;
+  margin-left: 10px;
+}
+
+.discover {
+  background: rgba(235, 237, 164, 0.2);
+  min-height: 1050px;
+}
+
+.title_dis_strong {
+  font-family: "Gotham Book", sans-serif;
+  color: var(--btn-bg-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title_dis_tahiti {
+  font-family: "Gotham Book", sans-serif;
+  color: var(--btn-bg-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.sub_title_discover {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 3.5rem;
+}
+
+.title_discover {
+  margin-bottom: 0.9rem;
+}
+
+.text_discover {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgba(51, 51, 51, 0.6);
+  margin-bottom: 2.7rem;
+}
+
+.btn_discover {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--btn-bg-color);
+  color: var(--secondary-text-color);
+  border: none;
+  min-width: 300px;
+  min-height: 80px;
+}
+
+.input-group {
+  width: 70rem;
+}
+
+.form-select {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333333;
+  min-height: 80px;;
+  padding-left: 25px;
 }
 
 .experience {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
-  min-height: 866px;
+  background-position: center center;
+  min-height: 54.125rem;
 }
 
-.btn_exp {
-  background-color: var(--btn-secondary-bg-color);
+.title_experience {
+  padding-top: 6.875rem;
+  margin-bottom: 0.9rem;
 }
 
-.title_experience h2 {
+.title_exp_strong {
   font-family: "Gotham Book", sans-serif;
   color: var(--btn-secondary-bg-color);
-  font-size: 40px;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.title_experience {
+.title_exp_tahiti {
   font-family: "Gotham Book", sans-serif;
   color: var(--btn-secondary-bg-color);
-  font-size: 40px;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -185,25 +358,26 @@ a {
 .sub_title_experience {
   font-family: "Gotham Light", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: var(--secondary-bg-color);
+  margin-bottom: 24.938rem;
 }
 
 .text_experience {
   font-family: "Gotham Book Italic", sans-serif;
   font-style: italic;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: var(--secondary-bg-color);
+  margin-bottom: 1.875rem;
+  line-height: normal;
 }
 
 .btn_exp {
-  position: absolute;
-  top: 1415px;
-  left: 43%;
   font-family: "Gotham Book", sans-serif;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--secondary-bg-color);
+  background-color: var(--btn-secondary-bg-color);
   border: none;
   text-align: center;
   width: 300px;
@@ -215,66 +389,97 @@ a {
 }
 
 .why_content {
-  min-height: 237px;
+  min-height: 250px;
   min-width: 1482px;
+  line-height: 21px;
 }
 
-.title_why {
+
+.title_why_strong {
   font-family: "Gotham Bold", sans-serif;
   color: var(--btn-secondary-bg-color);
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 113px;
+  margin-bottom: 70px;
+  justify-content: center;
 }
 
 .title_text {
   font-family: "Gotham Book", sans-serif;
   color: #333333;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 300;
+  justify-content: center;
 }
-
 
 .vacations {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top-center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-.vacations_block {  
-     min-height: 839px;
+.vacations_block {
+  position: relative;
+  min-height: 52.438rem;
+  padding: 195px 30px;
 }
 
 .btn_vac {
   position: absolute;
-  top: 2814px;
-  left: 43%;
+  /* top: 2814px; */
+  left: 40%;
   font-family: "Gotham Book", sans-serif;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 700;
   background-color: var(--btn-bg-color);
-  color: var( --secondary-text-color);
+  color: var(--secondary-text-color);
   border: none;
   text-align: center;
-  width: 300px;
-  height: 80px;
+  min-width: 300px;
+  min-height: 80px;
 }
 
 .title_vacations {
   font-family: "Gotham Bold", sans-serif;
   color: var(--secondary-text-color);
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
+  padding-top: 109px;
+  padding-bottom: 25px;
 }
 
 .text_vacations {
   font-family: "Gotham Book", sans-serif;
   color: var(--secondary-text-color);
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 300;
+  margin-bottom: 43px;
 }
 
 .vacations_content {
   background: rgb(0 0 0 / 40%);
-  min-height: 458px;
-  max-width: 1230px;
+  min-height: 28.125rem;
+  max-width: 76.875rem;
+}
+
+
+
+
+.social_link:hover {
+  animation: bounce 1s;
+  color: #3dbe98;
+}
+
+button:hover {
+  background: #09db95;
+  transform: translate(0, 0.25em);
+  transition-duration: 0.6s;
+}
+
+button:hover::before {
+  box-shadow: 0 0 0 2px #7badee, 0 0.5em 0 0 #b811c7;
+  transform: translate3d(0, 0.5em, -1em);
+  transition-duration: 0.4s;
 }
