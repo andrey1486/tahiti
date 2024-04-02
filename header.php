@@ -42,24 +42,21 @@
     <section class= "slider_content">
         
     
-    <?php
-
-if( have_rows('slider') ):
-
- 
-    while ( have_rows('slider') ) : the_row();
+    <?php if( have_rows('slider') ): while ( have_rows('slider') ) : the_row('slider');
   
    
     $image = get_sub_field('img_slide'); 
     ?>
+    
 	<div class="slick-slider" style=" background-image: url(<?php echo $image['url']; ?>);">
     <div class="caption_slider">
     <h1><?php the_sub_field('title')?></h1>
     <p class="slide_text"> <?php the_sub_field('text')?></p>
     </div>
     <?php      
+  
     endwhile;
-
+   
 endif;
 
 ?>
@@ -67,7 +64,6 @@ endif;
 </div>
 </section>
 
-     <?php wp_head(); ?>
      
     </header>
 

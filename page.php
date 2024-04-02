@@ -19,23 +19,23 @@
                 <?php
                      $args = array(
                         'post_type' => 'islands',
-                        'posts_per_page' => 10,
+                        'posts_per_page' => -1,
+                        'post_status' => 'publish',
                      );
 
-                     $p = get_posts($args);
-                     foreach ($p as $posts) {
-                        setup_postdata($post);
+                     $p = get_posts( $args );
+                     foreach ( $p as $post ) {
+                        setup_postdata( $post );
                         ?>
-
-
-				<div class="col-lg-3 col-sm-6 mb-3">
+  
+				<div class="col-lg-3 col-sm-6 mb-3 ">
 					<div class="island-card">
 						<div class="island-thumb">
-							<a href="#"><img src="<?php echo get_field('image_island')['url']; ?>"></a>
+							<a href="<?php the_field('link_island'); ?>"><img src="<?php echo get_field('image_island')['url']; ?>"></a>
 						</div>
 						<div class="island-details">
 							<h4><a href="#"><?php the_title(); ?></a></h4>
-							<p><?php the_field('sub_title_discover'); ?></p>
+							<p><?php the_excerpt();?></p>
 							
 							</div>
 							<div class="island-bottom-details d-flex justify-content-between align-items-center m-0">
@@ -44,7 +44,7 @@
 									<span class="price"><?php the_field('price'); ?></span> 
 								</div>
 								<div class="island-links">
-									<a href="#"><i class="fa fa-arrow-right" style="color: white;"></i></a>
+									<a href="<?php the_field('link_island'); ?>"><i class="fa fa-arrow-right" style="color: white;"></i></a>
 								</div>
 						</div>
 					</div>
@@ -56,21 +56,32 @@
               ?>
 	
 			</div>
+
+<!-- dropdown-->
+
             <div class="row text-center">
                 <p class="text_discover">
                 <?php the_field('text_discover'); ?>
                 </p>
             </div>
 
+            <div class="input-group mx-auto">
+                <select class="form-select" id="country" required>
+                <option value="">Select an island</option>
+                <option>Bora</option>
+                <option>Bora</option>
+                <option>Bora</option>
+              </select>
+
+              <button  class="btn_discover col-2 text-uppercase" type="button">explore</button>
+            </div>
+            </div>
+
 		</div>
 	</section>
        
-</section>
- 
-
-
-    <section class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
-    <div class="container">
+<section class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
+      <div class="container">
         <div class="title_experience d-flex">
    <p class="title_exp_strong"><?php the_field('title_exp_strong'); ?></p>
    &nbsp
@@ -79,31 +90,29 @@
         <div class="row ">
         <p class="sub_title_experience"><?php the_field('sub_title_experience'); ?></p>
         </div>
-        <div class="row text-center d-flex">
+        <div class="row text-center justify-content-center d-flex">
         <p class="text_experience"><?php the_field('text_experience'); ?></p>
-          </div>
-          
-            <button  class="btn_exp col-2 text-uppercase " type="button">learn more</button>
-          
-    </div>
+        <button  class="btn_exp col-2 text-uppercase " type="button">learn more</button>
+        </div>
+        </div>
 </section>
 
-            <section class="why">
-        <div class="container">
-            <div class="why_content">
-            <div class="title_why d-flex"><?php the_field('title_why'); ?></div>
-            <div class="title_text d-flex">
-             <div class="col-3">
+             <section class="why">
+             <div class="container">
+             <div class="why_content d-flex  row">
+             <p class="title_why_strong d-flex justify-content-center"><?php the_field('title_why'); ?></p>
+             <div class="title_text justify-content-between d-flex">
+             <div class="col-3 text-center">
              <?php the_field('why_text_left'); ?>
              </div>
-             <div class = "col-3">
+             <div class = "col-3 text-center">
              <?php the_field('why_text_center'); ?>
-            </div>
-            <div class="col-3">
-            <?php the_field('why_text_right'); ?>
-            </div>
-            </div>
-        </div>
+             </div>
+             <div class="col-3 text-center">
+             <?php the_field('why_text_right'); ?>
+             </div>
+             </div>
+      
         </div>
     </section>
 
@@ -122,10 +131,8 @@
      <button  class="btn_vac col-2 text-uppercase " type="button">book now</button>
 
    </div>
+ </div>
 </div>
-
-</div>
-
 </section>
 
 </main>

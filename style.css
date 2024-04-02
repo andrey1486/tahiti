@@ -56,6 +56,7 @@ body {
   line-height: 1.688rem;
   font-weight: 300;
   color: #2c2b2b;
+  letter-spacing: 1px;
 }
 
 a {
@@ -80,7 +81,9 @@ a {
   font-size: 1.1rem;
   text-transform: uppercase;
   color: var(--btn-secondary-bg-color);
-  padding-left: 6.063rem !important;
+  padding-left: 4.25rem!important;
+  padding-right: 0px !important;
+  letter-spacing: 2px;
 }
 
 .navbar-brand {
@@ -88,7 +91,7 @@ a {
   font-weight: 400;
   font-size: 2.5rem;
   color: var(--btn-secondary-bg-color);
-  padding-right: px;
+ line-height: normal;
 }
 
 @keyframes bounce {
@@ -145,7 +148,7 @@ a {
   margin-right: -50%;
   transform: translate(-50%, 150%);
 }
- 
+
 .slick-slider {
   min-height: 930px;
   background-size: cover;
@@ -153,7 +156,6 @@ a {
 }
 
 .caption_slider {
-
 }
 
 h1 {
@@ -165,7 +167,7 @@ h1 {
   top: 50%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -150%);
+  transform: translate(-50%, -100%);
   color: white;
 }
 
@@ -178,7 +180,7 @@ h1 {
   top: 50%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 140%);
 }
 
 .discover {
@@ -187,7 +189,7 @@ h1 {
 }
 
 .cards {
-  margin-bottom: 6.25rem;
+  margin-bottom: 5.2rem;
 }
 
 .island-card {
@@ -213,7 +215,8 @@ h1 {
 }
 
 .island-details {
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 0 1.25rem;
+  background-color: #fff;
 }
 
 .island-details h4 a {
@@ -222,16 +225,15 @@ h1 {
   font-weight: 400;
   display: block;
   color: var(--btn-bg-color);
-  height: 60px;
   overflow: hidden;
   text-transform: uppercase;
 }
 
 .island-details p {
   font-size: 18px;
-  margin-bottom: 1.25rem;
   color: #333333;
   overflow: hidden;
+  margin-bottom: 9px;
 }
 
 .island-bottom-details {
@@ -251,15 +253,16 @@ h1 {
 .island-price small {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
-  margin-right: 13px;
-}
-
-h4 {
+  margin-right: 0.813rem;
 }
 
 .island-links a {
   font-size: 1.25rem;
   margin-left: 10px;
+}
+
+.fa-arrow-right:hover {
+  animation: bounce 1s;
 }
 
 .discover {
@@ -288,11 +291,11 @@ h4 {
   font-weight: 400;
   font-size: 1.1rem;
   color: #333333;
-  margin-bottom: 3.813rem;
+  margin-bottom: 3.5rem;
 }
 
 .title_discover {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem;
 }
 
 .text_discover {
@@ -300,19 +303,43 @@ h4 {
   font-weight: 400;
   font-size: 1.5rem;
   color: rgba(51, 51, 51, 0.6);
-  margin-bottom: 3.813rem;
+  margin-bottom: 2.7rem;
+}
+
+.btn_discover {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--btn-bg-color);
+  color: var(--secondary-text-color);
+  border: none;
+  min-width: 18.75rem;
+  min-height: 5rem;
+}
+
+.input-group {
+  max-width: 70rem;
+}
+
+.form-select {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333333;
+  min-height: 80px;
+  padding-left: 25px;
 }
 
 .experience {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   min-height: 54.125rem;
 }
 
 .title_experience {
   padding-top: 6.875rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem;
 }
 
 .title_exp_strong {
@@ -345,12 +372,10 @@ h4 {
   font-size: 1.1rem;
   color: var(--secondary-bg-color);
   margin-bottom: 1.875rem;
+  line-height: normal;
 }
 
 .btn_exp {
-  position: absolute;
-  /* top: 1415px; */
-  left: 43%;
   font-family: "Gotham Book", sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
@@ -367,18 +392,19 @@ h4 {
 }
 
 .why_content {
-  min-height: 237px;
-  min-width: 1482px;
+  min-height: 250px;
+  /* min-width: 1482px; */
+  line-height: 21px;
 }
 
-.title_why {
+.title_why_strong {
   font-family: "Gotham Bold", sans-serif;
   color: var(--btn-secondary-bg-color);
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding-top: 101px;
-  margin-bottom: 50px;
+  padding-top: 113px;
+  margin-bottom: 70px;
   justify-content: center;
 }
 
@@ -393,7 +419,7 @@ h4 {
 .vacations {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top-center;
+  background-position: center center;
 }
 
 .vacations_block {
@@ -404,8 +430,7 @@ h4 {
 
 .btn_vac {
   position: absolute;
-  /* top: 2814px; */
-  left: 43%;
+  left: 40%;
   font-family: "Gotham Book", sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
@@ -413,8 +438,8 @@ h4 {
   color: var(--secondary-text-color);
   border: none;
   text-align: center;
-  width: 300px;
-  height: 80px;
+  min-width: 18.75rem;
+  min-height: 5rem;
 }
 
 .title_vacations {
@@ -422,7 +447,8 @@ h4 {
   color: var(--secondary-text-color);
   font-size: 2.5rem;
   font-weight: 700;
-  padding-top: 98px;
+  padding-top: 6.813rem;
+  padding-bottom: 1.563rem;
 }
 
 .text_vacations {
@@ -439,33 +465,66 @@ h4 {
   max-width: 76.875rem;
 }
 
-/*footer*/
+.footer {
+  letter-spacing: 3px;
+}
 
-/* .menu_footer_link {
-  font-family: "Gotham Light", sans-serif;
-  font-weight: 300;
-  font-size: 1.125rem;
-  color: var(--btn-secondary-bg-color);
-} */
+.navbar-collapse {
+  padding-left: 6.75rem;
+}
 
 .social_link:hover {
   animation: bounce 1s;
   color: #3dbe98;
 }
-/* 
-button:hover {
-    box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
-  }
-}
- */
 
 button:hover {
   background: #09db95;
   transform: translate(0, 0.25em);
   transition-duration: 0.6s;
 }
+
 button:hover::before {
   box-shadow: 0 0 0 2px #7badee, 0 0.5em 0 0 #b811c7;
   transform: translate3d(0, 0.5em, -1em);
   transition-duration: 0.4s;
 }
+
+.navbar-footer {
+  padding: 6.8rem 0 0.7rem 0;
+}
+
+.col-4 a {
+ font-family: "Gotham Light";
+ text-transform: lowercase;
+ line-height: normal;
+
+ }
+
+ .col-4 a::first-letter {
+  text-transform: uppercase;
+}
+
+
+.collapse > ul {
+  gap: 6.25rem;
+}
+
+.collapse a {
+  font-weight: 700;
+  }
+
+  @media(max-width:1315px){
+    .social {
+       visibility: hidden;
+    }
+    .collapse > ul {
+      gap: 1.25rem;
+    }
+}
+
+@media ( max-width: 1157px){
+  .collapse > ul {
+    gap: 0;
+  }
+

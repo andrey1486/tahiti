@@ -3,71 +3,68 @@
 <div class="container">
 <div class="row">
 	
-        <nav class="navbar navbar-expand-md mb-2">
+        <nav class="navbar-footer d-flex navbar-expand-md ">
 	        <?php the_custom_logo(); ?>
 
-            <div class="container">
+            
                 <a class="navbar-brand" href="#"><?php echo wp_get_document_title() ?>
 			</a>
-                <div class="collapse navbar-collapse  id="navbarCollapse">
+                <div class="collapse justify-content-between navbar-collapse  id="navbarCollapse">
 				                    
                    <?php
 				    wp_nav_menu(array(
 					    'theme_location' => 'menu-footer',
 					    'container' => false,
-					    'menu_class' => '',
+					    'menu_class' => 'footer_menu',
 					    'fallback_cb' => '__return_false',
-					    'items_wrap' => '<ul id="%1$s" class="navbar-nav me-auto mb-2 mb-md-0  d-flex %2$s">%3$s</ul>',
+					    'items_wrap' => '<ul  id="%1$s" class="navbar-nav row row-cols-1 row-cols-sm-2 row-cols-md-5  d-flex %2$s">%3$s</ul>',
 					    'depth' => 1,
 					    'walker' => new bootstrap_5_wp_nav_menu_walker()
 				    ));
 				    ?>
-<?php
-              if( have_rows('social') ):
-	echo '<div class="d-flex flex-row mb-3 social my-4">';
+
+
+<?php if( have_rows('social') ):
+
+	echo '<div class="d-flex flex-row mb-2 social >';
 	echo '<ul class="social_nav  d-flex">';
 	while ( have_rows('social' ) ) : the_row();
 		$socialchannel = get_sub_field('social_channel');
 		$socialurl = get_sub_field('social_url' );
 		$color_social = get_sub_field('color_social' );
-		echo '<li class="social_item d-flex mx-3">';
+		echo '<li class="social_item d-flex ms-4">';
 		echo '<a class="social_link" rel="nofollow noopener noreferrer" href="' . $socialurl . '" target="_blank">';
 		echo '<i class="fa-brands fa-' . $socialchannel . '" style="font-size:2.5rem; color: ' . $color_social . '";></i>';
 		echo '<span class="sr-only hidden">' . ucfirst($socialchannel) . '</span>';
-			echo '</a></li>';
+		echo '</a></li>';
 	endwhile;
 	echo '</ul>';
 	echo '</div>';
 endif;
 
 ?> 
+    </div>
 
-
-                </div>
+</div>
 				</div>
-				</div>
-				</div>
-
-				
-				
-                <div class="container">
-				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-5  justify-content-md-center">
-				
-                <div class="col-4">
+			
+      <div class="container">
+	        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5  justify-content-md-center">
+				<div class="col-4 ">
 					<?php
 				    wp_nav_menu(array(
 					    'theme_location' => 'menu-footer-col-left',
 					    'container' => false,
 					    'menu_class' => '',
 					    'fallback_cb' => '__return_false',
-					    'items_wrap' => '<ul id="%1$s" class="list-unstyled %2$s">%3$s</ul>',
+					    'items_wrap' => '<ul id="%1$s" class="list-unstyled  fs-1 %2$s">%3$s</ul>',
 					    'depth' => 1,
 					    'walker' => new bootstrap_5_wp_nav_menu_walker()
 				    ));
 				    ?>
 					</div>
 			
-					<div class="col-4">
+					<div class="col-4 justify-content-right">
 					<?php
 				    wp_nav_menu(array(
 					    'theme_location' => 'menu-footer-col-center',
@@ -94,19 +91,14 @@ endif;
 				    ));
 				    ?>
 					</div>
-				</div>
+				  </div>
 				</div>
             </div>
         </nav>
-        </div>
-      
-		
-		
-
-</div>
+      </div>
+	</div>
 
 </footer>
     
-
 
 <?php wp_footer(); ?>

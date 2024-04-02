@@ -1,8 +1,13 @@
 <?php
+/**
+ * Thahiti functions and definitions
+ *
+ * @link https://developer.wordpress.org
+ */
+
 
 add_action( 'wp_enqueue_scripts', function() {
 
-	
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.css');
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
 	wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
@@ -22,7 +27,6 @@ add_action('after_setup_theme', 'tahiti_setup');
 
 add_filter('show_admin_bar', '__return_false');
 
-
 function tahiti_setup() {
 	register_nav_menu('menu-header', 'Menu header');
 	register_nav_menu('menu-footer', 'Menu footer'); 
@@ -37,12 +41,11 @@ function tahiti_setup() {
 
 add_filter( 'upload_mimes', 'svg_upload_allow' );
 
-
 add_action( 'init', 'islands_register_types' );
-
 
 function islands_register_types(){
 
+    
     register_taxonomy('category_islands', ['islands'], [
         'labels'                => [
             'name'              => 'Islands',
@@ -63,8 +66,8 @@ function islands_register_types(){
         'hierarchical'          => true,
         'rewrite'               => true,
         'show_admin_column'     => true,
-   
 ]);
+
 
     register_post_type( 'islands', array(
         'labels'                 => array( 
@@ -85,7 +88,7 @@ function islands_register_types(){
         'menu_position'       => 20,
         'menu_icon'           => 'dashicons-palmtree', 
         'hierarchical'        => false,
-        'supports'            => ['title','excerpt', 'thumbnail'],
+        'supports'            => ['title','excerpt'],
         'has_archive' => false,
     ));
 
