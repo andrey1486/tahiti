@@ -28,6 +28,7 @@ $(function () {
 
 
   $('.carusel_card').slick({
+    arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,

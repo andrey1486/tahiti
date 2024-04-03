@@ -94,6 +94,20 @@ function islands_register_types(){
 
 }
 
+add_theme_support(
+    'html5',
+    array(
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+        'style',
+        'script',
+    )
+);
+
+
 // add_filter( 'nav_menu_link_attributes', 'my_nav_link_filter', 10, 4 );
 // function my_nav_link_filter( $atts, $item, $args){
 //    if( $args->theme_location == ('menu-footer-col-left') ){//если нужно для конкретного меню

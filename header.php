@@ -1,3 +1,9 @@
+<?php
+/**
+ * The header for our theme
+ */
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -9,10 +15,11 @@
 	<?php wp_head(); ?>
 </head>
 
+<body <?php body_class(); ?>>
 
 <header class="header">
     <div class="container">
-
+ <!-- MENU HEADER -->
         <nav class="navbar navbar-expand-md">
 	        <?php the_custom_logo(); ?>
             <div class="container-fluid">
@@ -39,13 +46,14 @@
     </div>
 
     <!-- SLIDER -->
+  
     <section class= "slider_content">
         
     
     <?php if( have_rows('slider') ): while ( have_rows('slider') ) : the_row('slider');
   
-   
     $image = get_sub_field('img_slide'); 
+    
     ?>
     
 	<div class="slick-slider" style=" background-image: url(<?php echo $image['url']; ?>);">
@@ -63,7 +71,6 @@ endif;
 
 </div>
 </section>
-
      
     </header>
 

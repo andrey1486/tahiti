@@ -14,7 +14,9 @@
         <div class="row ">
         <p class="sub_title_discover"><?php the_field('sub_title_discover'); ?></p>
         </div>
-
+  
+        <!-- Сards of island -->
+        
 			<div class="row cards">
                 <?php
                      $args = array(
@@ -27,7 +29,7 @@
                      foreach ( $p as $post ) {
                         setup_postdata( $post );
                         ?>
-  
+                     
 				<div class="col-lg-3 col-sm-6 mb-3 ">
 					<div class="island-card">
 						<div class="island-thumb">
@@ -68,16 +70,29 @@
             <div class="input-group mx-auto">
                 <select class="form-select" id="country" required>
                 <option value="">Select an island</option>
-                <option>Bora</option>
-                <option>Bora</option>
-                <option>Bora</option>
-              </select>
+                <?php
+                     $args = array(
+                        'post_type' => 'islands',
+                        'posts_per_page' => 4,
+                        'post_status' => 'publish',
+                     );
 
-              <button  class="btn_discover col-2 text-uppercase" type="button">explore</button>
+                     $p = get_posts( $args );
+                     foreach ( $p as $post ) {
+                        setup_postdata( $post );
+                        ?>
+           
+                <option><a class="dropdown-item" href="<?php the_field('link_island'); ?>"><?php the_title(); ?></a></option>
+
+                <?php } wp_reset_postdata(); ?>
+                      
+                </select>
+
+                <button class="btn_discover col-2 text-uppercase" type="button"><a href="<?php the_field('link_island'); ?>">explore</a></button>
+               
             </div>
             </div>
-
-		</div>
+		
 	</section>
        
 <section class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
