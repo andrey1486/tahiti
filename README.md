@@ -1,2 +1,3 @@
-Test task for WLA
+Test task for WLA,
+
 WordPress theme from scratch
