@@ -107,23 +107,6 @@ add_theme_support(
     )
 );
 
-
-// add_filter( 'nav_menu_link_attributes', 'my_nav_link_filter', 10, 4 );
-// function my_nav_link_filter( $atts, $item, $args){
-//    if( $args->theme_location == ('menu-footer-col-left') ){//если нужно для конкретного меню
-//     $atts['class'] .= 'menu_footer_link';
-//   }
-//   return $atts;
-// }
-
-# Добавляет SVG в список разрешенных для загрузки файлов.
-function svg_upload_allow( $mimes ) {
-	$mimes['svg']  = 'image/svg+xml';
-
-	return $mimes;
-}
-
-
 require_once get_template_directory() . '/inc/wp_nav_bootstrap.php';
 
 ?>

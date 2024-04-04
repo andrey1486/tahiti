@@ -1,3 +1,9 @@
+<?php
+/**
+ * The footer for our theme
+ */
+?>
+
 <footer class="footer">
 
 <div class="container">

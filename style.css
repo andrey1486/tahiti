@@ -148,26 +148,18 @@ a {
   margin-right: -50%;
   transform: translate(-50%, 150%);
 }
-
-.slick-slider {
+.slider_img {
   min-height: 930px;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.caption_slider {
-}
+} 
 
 h1 {
   font-family: "Gotham Book", sans-serif;
   font-weight: 700;
   font-size: 3.75rem;
   text-transform: uppercase;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -100%);
+  margin-bottom: 2.25rem;
   color: white;
 }
 
@@ -176,11 +168,11 @@ h1 {
   font-weight: 400;
   font-size: 1.875rem;
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, 140%);
+}
+
+.slide_info {
+  text-align: center;
+ margin-top: 25rem;
 }
 
 .discover {
@@ -188,14 +180,17 @@ h1 {
   padding-bottom: 6.188rem;
 }
 
-.cards {
-  margin-bottom: 5.2rem;
-}
+.carusel_card {
+  margin-bottom: 100px;
+  
+} 
 
 .island-card {
-  min-height: 448px;
+  
+  height: 448px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.3s;
+  width: 348px;
 }
 
 .island-card:hover {
@@ -217,6 +212,7 @@ h1 {
 .island-details {
   padding: 1.25rem 1.25rem 0 1.25rem;
   background-color: #fff;
+  height: 175px;
 }
 
 .island-details h4 a {

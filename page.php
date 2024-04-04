@@ -1,4 +1,8 @@
-
+<?php
+/**
+ * The main for our theme
+ */
+?>
 
 <?php get_header(); ?>
     <main class="main">
@@ -18,6 +22,9 @@
         <!-- Сards of island -->
         
 			<div class="row cards">
+                    
+                    <div class = "carusel_card ">
+
                 <?php
                      $args = array(
                         'post_type' => 'islands',
@@ -33,7 +40,7 @@
 				<div class="col-lg-3 col-sm-6 mb-3 ">
 					<div class="island-card">
 						<div class="island-thumb">
-							<a href="<?php the_field('link_island'); ?>"><img src="<?php echo get_field('image_island')['url']; ?>"></a>
+							<a target="_blank" href="<?php the_field('link_island'); ?>"><img src="<?php echo get_field('image_island')['url']; ?>"></a>
 						</div>
 						<div class="island-details">
 							<h4><a href="#"><?php the_title(); ?></a></h4>
@@ -46,7 +53,7 @@
 									<span class="price"><?php the_field('price'); ?></span> 
 								</div>
 								<div class="island-links">
-									<a href="<?php the_field('link_island'); ?>"><i class="fa fa-arrow-right" style="color: white;"></i></a>
+									<a target="_blank" href="<?php the_field('link_island'); ?>"><i class="fa fa-arrow-right" style="color: white;"></i></a>
 								</div>
 						</div>
 					</div>
@@ -73,7 +80,7 @@
                 <?php
                      $args = array(
                         'post_type' => 'islands',
-                        'posts_per_page' => 4,
+                        'posts_per_page' => -1,
                         'post_status' => 'publish',
                      );
 
