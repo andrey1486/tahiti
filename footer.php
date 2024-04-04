@@ -15,22 +15,9 @@
             
                 <a class="navbar-brand" href="#"><?php echo wp_get_document_title() ?>
 			</a>
-                <div class="collapse justify-content-between navbar-collapse  id="navbarCollapse">
+                <div class="collapse justify-content-end navbar-collapse  id="navbarCollapse">
 				                    
-                   <?php
-				    wp_nav_menu(array(
-					    'theme_location' => 'menu-footer',
-					    'container' => false,
-					    'menu_class' => 'footer_menu',
-					    'fallback_cb' => '__return_false',
-					    'items_wrap' => '<ul  id="%1$s" class="navbar-nav row row-cols-1 row-cols-sm-2 row-cols-md-5  d-flex %2$s">%3$s</ul>',
-					    'depth' => 1,
-					    'walker' => new bootstrap_5_wp_nav_menu_walker()
-				    ));
-				    ?>
-
-
-<?php if( have_rows('social') ):
+                <?php if( have_rows('social') ):
 
 	echo '<div class="d-flex flex-row mb-2 social >';
 	echo '<ul class="social_nav  d-flex">';
@@ -55,7 +42,7 @@ endif;
 			
 			
       <div class="container">
-	        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5  justify-content-md-center">
+	        <div class="footer_links row row-cols-1  row-cols-md-5  justify-content-md-center">
 				<div class="col-4 ">
 					<?php
 				    wp_nav_menu(array(
@@ -63,7 +50,7 @@ endif;
 					    'container' => false,
 					    'menu_class' => '',
 					    'fallback_cb' => '__return_false',
-					    'items_wrap' => '<ul id="%1$s" class="list-unstyled  fs-1 %2$s">%3$s</ul>',
+					    'items_wrap' => '<ul id="%1$s" class="list-unstyled fo fs-1 %2$s">%3$s</ul>',
 					    'depth' => 1,
 					    'walker' => new bootstrap_5_wp_nav_menu_walker()
 				    ));

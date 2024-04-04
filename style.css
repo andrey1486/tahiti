@@ -81,7 +81,7 @@ a {
   font-size: 1.1rem;
   text-transform: uppercase;
   color: var(--btn-secondary-bg-color);
-  padding-left: 4.25rem!important;
+  padding-left: 4.25rem !important;
   padding-right: 0px !important;
   letter-spacing: 2px;
 }
@@ -91,7 +91,7 @@ a {
   font-weight: 400;
   font-size: 2.5rem;
   color: var(--btn-secondary-bg-color);
- line-height: normal;
+  line-height: normal;
 }
 
 @keyframes bounce {
@@ -152,7 +152,7 @@ a {
   min-height: 930px;
   background-size: cover;
   background-repeat: no-repeat;
-} 
+}
 
 h1 {
   font-family: "Gotham Book", sans-serif;
@@ -172,7 +172,7 @@ h1 {
 
 .slide_info {
   text-align: center;
- margin-top: 25rem;
+  margin-top: 25rem;
 }
 
 .discover {
@@ -181,12 +181,10 @@ h1 {
 }
 
 .carusel_card {
-  margin-bottom: 100px;
-  
-} 
+  margin-bottom: 86px;
+}
 
 .island-card {
-  
   height: 448px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.3s;
@@ -465,10 +463,6 @@ h1 {
   letter-spacing: 3px;
 }
 
-.navbar-collapse {
-  padding-left: 6.75rem;
-}
-
 .social_link:hover {
   animation: bounce 1s;
   color: #3dbe98;
@@ -490,37 +484,66 @@ button:hover::before {
   padding: 6.8rem 0 0.7rem 0;
 }
 
+.col-4 {
+  margin-top: -70px;
+}
+
+.footer li:first-child {
+  margin-bottom: 20px;
+}
+
+/* .fo>li:first-child {
+  font-weight: 700;
+  text-transform: uppercase;
+} */
+
 .col-4 a {
- font-family: "Gotham Light";
- text-transform: lowercase;
- line-height: normal;
+  font-family: "Gotham Light";
+  text-transform: lowercase;
+  line-height: normal;
+}
 
- }
-
- .col-4 a::first-letter {
+.col-4 a::first-letter {
   text-transform: uppercase;
 }
 
-
-.collapse > ul {
-  gap: 6.25rem;
-}
-
-.collapse a {
-  font-weight: 700;
+@media (max-width: 1150px) {
+  .social {
+    flex-direction: column !important;
   }
 
-  @media(max-width:1315px){
-    .social {
-       visibility: hidden;
-    }
-    .collapse > ul {
-      gap: 1.25rem;
-    }
+  .footer_links {
+    margin-top: -170px;
+  }
 }
 
-@media ( max-width: 1157px){
-  .collapse > ul {
-    gap: 0;
+@media (max-width: 920px) {
+  .nav-link {
+    padding-left: 10px !important;
   }
+}
+
+@media (max-width: 840px) {
+  .navbar-brand,
+  .custom-logo {
+    display: none;
+  }
+  .footer_links {
+    justify-content: space-between !important;
+    align-items: center;
+  }
+  .social {
+    flex-direction: row !important;
+    justify-content: center !important;
+    margin-bottom: 250px !important;
+    margin-right: 170px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .footer_links {
+    margin-top: 50px;
+  }
+}
 

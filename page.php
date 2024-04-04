@@ -23,7 +23,7 @@
         
 			<div class="row cards">
                     
-                    <div class = "carusel_card ">
+                    <div class = "carusel_card  ">
 
                 <?php
                      $args = array(
@@ -37,7 +37,7 @@
                         setup_postdata( $post );
                         ?>
                      
-				<div class="col-lg-3 col-sm-6 mb-3 ">
+				<div class="col-xxl-3 col-xl-4 col-lg-2 col-md-1 mb-3 ">
 					<div class="island-card">
 						<div class="island-thumb">
 							<a target="_blank" href="<?php the_field('link_island'); ?>"><img src="<?php echo get_field('image_island')['url']; ?>"></a>
