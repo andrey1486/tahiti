@@ -26,8 +26,8 @@ $(function () {
 
   });
 
-
-  $('.carusel_card').slick({
+$(function() {
+  $(".carusel_card").slick({
     infinite: true,
     arrows: false,
     slidesToShow: 4,
@@ -57,16 +57,4 @@ $(function () {
     ]
 });
 
-
-
-
-  // wow = new WOW(
-  //   {
-  //     boxClass: 'wow',      // default
-  //     animateClass: 'animate__animated', // default
-  //     offset: 0,          // default
-  //     mobile: true,       // default
-  //     live: true        // default
-  //   }
-  // )
-  // wow.init();
+});

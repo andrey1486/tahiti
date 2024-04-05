@@ -78,6 +78,7 @@
                 <select class="form-select" id="country" required>
                 <option value="">Select an island</option>
                 <?php
+                     $link_island = the_field('link_island');
                      $args = array(
                         'post_type' => 'islands',
                         'posts_per_page' => -1,
@@ -87,9 +88,11 @@
                      $p = get_posts( $args );
                      foreach ( $p as $post ) {
                         setup_postdata( $post );
-                        ?>
+                     ?>
            
                 <option><a class="dropdown-item" href="<?php the_field('link_island'); ?>"><?php the_title(); ?></a></option>
+
+               
 
                 <?php } wp_reset_postdata(); ?>
                       

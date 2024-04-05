@@ -492,10 +492,10 @@ button:hover::before {
   margin-bottom: 20px;
 }
 
-/* .fo>li:first-child {
+/* .footer li :first-child {
   font-weight: 700;
   text-transform: uppercase;
-} */
+}  */
 
 .col-4 a {
   font-family: "Gotham Light";

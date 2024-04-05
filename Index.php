@@ -1,3 +1,9 @@
+<?php
+/**
+ * The index for our theme
+ */
+?>
+
 <?php get_header(); ?>
-123
+
 <?php get_footer(); ?>

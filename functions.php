@@ -107,6 +107,13 @@ add_theme_support(
     )
 );
 
+function svg_upload_allow( $mimes ) {
+	$mimes['svg']  = 'image/svg+xml';
+
+	return $mimes;
+}
+
+
 require_once get_template_directory() . '/inc/wp_nav_bootstrap.php';
 
 ?>
