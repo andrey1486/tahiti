@@ -7,7 +7,7 @@
 <?php get_header(); ?>
     <main class="main">
 
-    <section class="discover">
+    <section class="discover" id="discover">
         <div class="container">
 
 		<div class="title_discover d-flex">
@@ -105,7 +105,7 @@
 		
 	</section>
        
-<section class="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
+<section class="experience" id="experience" style=" background-image: url(<?php the_field('img_experience'); ?>);">
       <div class="container">
         <div class="title_experience d-flex">
    <p class="title_exp_strong"><?php the_field('title_exp_strong'); ?></p>
@@ -125,7 +125,11 @@
              <section class="why">
              <div class="container">
              <div class="why_content d-flex  row">
-             <p class="title_why_strong d-flex justify-content-center"><?php the_field('title_why'); ?></p>
+          <div class="title_why d-flex justify-content-center">
+             <p class="title_why_strong"><?php the_field('title_why'); ?></p>
+             &nbsp
+             <p class="title_why_island"><?php the_field('title_why_island'); ?></p>
+             </div>
              <div class="title_text justify-content-between d-flex">
              <div class="col-3 text-center">
              <?php the_field('why_text_left'); ?>
@@ -142,7 +146,7 @@
     </section>
 
     
-<section class="vacations" style=" background-image: url(<?php the_field('img_vacations'); ?>);">
+<section class="vacations" id="vacations" style=" background-image: url(<?php the_field('img_vacations'); ?>);">
 <div class="container">
    <div class="vacations_block ">
      <div class="vacations_content mx-auto text-center alighn-center ">

@@ -31,23 +31,27 @@ Tags:
 }
 
 @font-face {
-  font-family: "Gotham Bold", sans-serif;
-  src: url("/assets/fonts/Gotham/GothamBold.woff2") format("woff2");
+  font-family: "Gotham Bold";
+  src: url(./assets/fonts/Gotham/GothamBold.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: "Gotham Book", sans-serif;
-  src: url("/assets/fonts/Gotham/GothamBook.woff2") format("woff2");
+  font-family: "Gotham Book";
+  src: url(./assets/fonts/Gotham/GothamBook.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: "Gotham Book Italic", sans-serif;
-  src: url("/assets/fonts/Gotham/GothamBookItalic.woff2") format("woff2");
+  font-family: "Gotham Book Italic";
+  src: url(./assets/fonts/Gotham/GothamBookItalic.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: "Gotham Light", sans-serif;
-  src: url("/assets/fonts/Gotham/GothamLight.woff2") format("woff2");
+  font-family: "Gotham Light";
+  src: url(./assets/fonts/Gotham/GothamLight.woff2) format("woff2");
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,7 +60,7 @@ body {
   line-height: 1.688rem;
   font-weight: 300;
   color: #2c2b2b;
-  letter-spacing: 1px;
+  letter-spacing: normal;
 }
 
 a {
@@ -115,13 +119,13 @@ a {
 }
 
 .nav-link:hover {
-  animation: bounce 1s;
   color: #3dbe98;
+  transition: 0.3s;
 }
 
 .navbar-brand:hover {
-  animation: bounce 1s;
   color: #3dbe98;
+  transition: 0.3s;
 }
 
 .hero_title {
@@ -387,7 +391,6 @@ h1 {
 
 .why_content {
   min-height: 250px;
-  /* min-width: 1482px; */
   line-height: 21px;
 }
 
@@ -399,7 +402,15 @@ h1 {
   text-transform: uppercase;
   padding-top: 113px;
   margin-bottom: 70px;
-  justify-content: center;
+}
+
+.title_why_island {
+  font-family: "Gotham Light", sans-serif;
+  color: var(--btn-secondary-bg-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding-top: 113px;
+  margin-bottom: 70px;
 }
 
 .title_text {
@@ -492,10 +503,10 @@ button:hover::before {
   margin-bottom: 20px;
 }
 
-/* .footer li :first-child {
+/* .footer .container .footer_links .col-4 li>a:first-child {
   font-weight: 700;
   text-transform: uppercase;
-}  */
+}   */
 
 .col-4 a {
   font-family: "Gotham Light";
@@ -538,7 +549,6 @@ button:hover::before {
     margin-bottom: 250px !important;
     margin-right: 170px;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -546,4 +556,3 @@ button:hover::before {
     margin-top: 50px;
   }
 }
-

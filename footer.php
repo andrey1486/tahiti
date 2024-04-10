@@ -4,7 +4,7 @@
  */
 ?>
 
-<footer class="footer">
+<footer class="footer" id="about">
 
 <div class="container">
 <div class="row">
@@ -19,8 +19,8 @@
 				                    
                 <?php if( have_rows('social') ):
 
-	echo '<div class="d-flex flex-row mb-2 social >';
-	echo '<ul class="social_nav  d-flex">';
+	echo '<div class="d-flex flex-row mb-2 social" >';
+	echo '<ul class= "social_nav  d-flex">';
 	while ( have_rows('social' ) ) : the_row();
 		$socialchannel = get_sub_field('social_channel');
 		$socialurl = get_sub_field('social_url' );

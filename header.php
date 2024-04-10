@@ -48,7 +48,7 @@
     <!-- SLIDER HEADER-->
   
     <section class= "slider_header">
-           
+     
     <?php if( have_rows('slider') ): 
     
     echo '<div class="slick-slider">';
@@ -59,13 +59,13 @@
     ?>
     
    
-	<div class="slider_img" style=" background-image: url(<?php echo $image['url']; ?>);">
-    <div class="slide_info">
+	<div class="slider_img" style="background-image: url(<?php echo $image['url']; ?>);">
+     <div class="slide_info">
     <h1><?php the_sub_field('title')?></h1>
     <p class="slide_text"> <?php the_sub_field('text')?></p>
     </div>
     </div>
-       
+      
     <?php      
   
     endwhile;
