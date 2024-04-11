@@ -11,7 +11,6 @@
 	
         <nav class="navbar-footer d-flex navbar-expand-md ">
 	        <?php the_custom_logo(); ?>
-
             
                 <a class="navbar-brand" href="#"><?php echo wp_get_document_title() ?>
 			</a>

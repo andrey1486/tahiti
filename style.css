@@ -313,6 +313,8 @@ h1 {
   border: none;
   min-width: 18.75rem;
   min-height: 5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-group {
@@ -380,10 +382,12 @@ h1 {
   color: var(--secondary-bg-color);
   background-color: var(--btn-secondary-bg-color);
   border: none;
-  text-align: center;
   width: 300px;
   height: 80px;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .why {
   min-height: 453px;
@@ -419,6 +423,7 @@ h1 {
   font-size: 1.1rem;
   font-weight: 300;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .vacations {
@@ -442,10 +447,12 @@ h1 {
   background-color: var(--btn-bg-color);
   color: var(--secondary-text-color);
   border: none;
-  text-align: center;
   min-width: 18.75rem;
   min-height: 5rem;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .title_vacations {
   font-family: "Gotham Bold", sans-serif;
@@ -479,7 +486,7 @@ h1 {
   color: #3dbe98;
 }
 
-button:hover {
+.button:hover {
   background: #09db95;
   transform: translate(0, 0.25em);
   transition-duration: 0.6s;

@@ -73,7 +73,7 @@
 endif;
 
 ?>
-</div>
+
 </section>
      
 </header>
