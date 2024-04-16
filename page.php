@@ -40,7 +40,7 @@
                 <?php
                      $args = array(
                         'post_type' => 'islands',
-                        'posts_per_page' => -1,
+                        'posts_per_page' => get_field('number_of_islands'),
                         'post_status' => 'publish',
                      );
 
@@ -106,6 +106,8 @@
                 <select class="form-select" id="country" required>
                 <option value="">Select an island</option>
                 <?php
+
+                       
                         $args = array(
                         'post_type' => 'islands',
                         'posts_per_page' => -1,

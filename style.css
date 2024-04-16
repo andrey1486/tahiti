@@ -79,6 +79,10 @@ a {
   min-height: 9.375rem;
 }
 
+.nav_ul {
+  justify-content: flex-end;
+}
+
 .nav-link {
   font-family: "Gotham Book", sans-serif;
   font-weight: 400;
@@ -152,10 +156,12 @@ a {
   margin-right: -50%;
   transform: translate(-50%, 150%);
 }
+
 .slider_img {
   min-height: 930px;
   background-size: cover;
   background-repeat: no-repeat;
+  filter: brightness(75%);
 }
 
 h1 {
@@ -543,8 +549,10 @@ button:hover::before {
 
 @media (max-width: 840px) {
   .navbar-brand,
-  .custom-logo {
+  .custom-logo
+  {
     display: none;
+    
   }
   .footer_links {
     justify-content: space-between !important;
@@ -563,3 +571,29 @@ button:hover::before {
     margin-top: 50px;
   }
 }
+@media (max-width: 846px) {
+  .btn_vac {
+    min-width: 12rem;
+    min-height: 3rem;
+    font-size: 12px;
+    left: 20%;
+  }
+
+  .vacations_content {
+    min-height: 35rem;
+  }
+
+  .btn_discover {
+    min-width: 8rem;
+    font-size: 12px;
+  }
+
+  .title_experience {
+    display: block !important;
+  }
+  
+  .form-select {
+    font-size: 1rem;
+  }
+}
+

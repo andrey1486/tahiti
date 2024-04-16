@@ -63,9 +63,9 @@ function islands_register_types(){
         'hierarchical'          => true,
         'show_ui'               => true,
         'hierarchical'          => true,
-        'rewrite'               => true,
+        'rewrite'               => false,
         'show_admin_column'     => true,
-]);
+      ]);
 
 
     register_post_type( 'islands', array(
@@ -88,7 +88,8 @@ function islands_register_types(){
         'menu_icon'           => 'dashicons-palmtree', 
         'hierarchical'        => false,
         'supports'            => ['title','excerpt'],
-        'has_archive' => false,
+        'has_archive'         => false,
+        'publicly_queryable'  => false,
     ));
 
 }
