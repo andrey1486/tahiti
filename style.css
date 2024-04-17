@@ -1,17 +1,17 @@
 /*
 Theme Name: Tahiti
-Theme URI:
+Theme URI: http://wordpress.org
 Author: Andrey Chervonuik
 Author URI: https://wordpress.org
-Description: test task for WHA
+Description: test task for WLA
 Requires at least: 1.0.0
 Tested up to: 6.4
 Requires PHP: 5.6
 Version: 1.3
-License:
-License URI:
+License: GNU General Public License v2 or later
+License URI: License
 Text Domain: TAHINI
-Tags:
+Tags:custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
 :root {
@@ -394,7 +394,6 @@ h1 {
   justify-content: center;
 }
 
-
 .why {
   min-height: 453px;
 }
@@ -458,7 +457,6 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-
 
 .title_vacations {
   font-family: "Gotham Bold", sans-serif;
@@ -549,10 +547,8 @@ button:hover::before {
 
 @media (max-width: 840px) {
   .navbar-brand,
-  .custom-logo
-  {
+  .custom-logo {
     display: none;
-    
   }
   .footer_links {
     justify-content: space-between !important;
@@ -591,9 +587,12 @@ button:hover::before {
   .title_experience {
     display: block !important;
   }
-  
+
   .form-select {
     font-size: 1rem;
   }
-}
 
+  .nav-link {
+    font-size: 12px;
+  }
+}

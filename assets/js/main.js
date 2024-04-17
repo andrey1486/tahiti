@@ -58,3 +58,9 @@ $(function() {
 });
 
 });
+
+$('#select-discover').on('change', function() {
+	let linkSelect = $(this).val();
+	let btn = $(".btn_discover");
+	btn.attr('href', linkSelect);
+})

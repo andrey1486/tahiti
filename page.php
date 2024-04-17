@@ -103,14 +103,14 @@
             </div>
 
             <div class="input-group mx-auto">
-                <select class="form-select" id="country" required>
+                <select id="select-discover" class="form-select" id="country" required>
                 <option value="">Select an island</option>
                 <?php
 
                        
                         $args = array(
                         'post_type' => 'islands',
-                        'posts_per_page' => -1,
+                        'posts_per_page' => get_field('number_of_islands'),
                         'post_status' => 'publish',
                      );
 
@@ -119,22 +119,28 @@
                         setup_postdata( $post );
                      ?>
 
-                <?php if( get_field('link_island') ): ?>
-                <option><a class="dropdown-item" href="<?php the_field('link_island'); ?>"><?php the_title(); ?></a></option>
+                <?php
+                 $link_island = get_field('link_island');
+                 if( $link_island ): ?>
+                <option value = "<?php echo esc_url( $link_island ); ?>">
+                    <a class="dropdown-item" href="<?php echo esc_url( $link_island ); ?>">
+                    <?php the_title(); ?>
+                </a>
+                </option>
                 <?php endif; ?>
 
                 <?php } wp_reset_postdata(); ?>
-                      
+                
                 </select>
 
-                <?php 
+    <?php 
     $link_explore = get_field('link_explore');
     if( $link_explore ): 
     $link_url_explore = $link_explore['url'];
     $link_title_explore = $link_explore['title'];
-    $link_target_explore = $link_explore['target'] ? $link_explore['target'] : '_self';
+    $link_target_explore = $link_explore['target'] ? $link_explore['target'] : '_blank';
     ?>
-    <a class="button btn_discover d-flex col-2 text-uppercase" href="<?php echo esc_url( $link_url_explore ); ?>" target="<?php echo esc_attr( $link_target_explore ); ?>"><?php echo esc_html( $link_title_explore ); ?></a>
+    <a class="button btn_discover d-flex col-2 text-uppercase" href="" target="<?php echo esc_attr( $link_target_explore ); ?>"><?php echo esc_html( $link_title_explore ); ?></a>
     <?php endif; ?>
 
     </div>

@@ -2,8 +2,7 @@
 /**
  * Thahiti functions and definitions
  *
- * @link https://developer.wordpress.org
- */
+*/
 
 
 add_action( 'wp_enqueue_scripts', function() {
