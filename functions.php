@@ -43,30 +43,6 @@ add_action( 'init', 'islands_register_types' );
 
 function islands_register_types(){
 
-    
-    register_taxonomy('category_islands', ['islands'], [
-        'labels'                => [
-            'name'              => 'Islands',
-            'singular_name'     => 'Island',
-            'search_items'      => 'Search island',
-            'all_items'         => 'All islands',
-            'view_item '        => 'View islands',
-            'edit_item'         => 'Edit islands',
-            'update_item'       => 'Update islands',
-            'add_new_item'      => 'Add new island',
-            'new_item_name'     => 'Add island',
-            'menu_name'         => 'All islands',
-        ],
-        'description'           => 'Category',
-        'public'                => true,
-        'hierarchical'          => true,
-        'show_ui'               => true,
-        'hierarchical'          => true,
-        'rewrite'               => false,
-        'show_admin_column'     => true,
-      ]);
-
-
     register_post_type( 'islands', array(
         'labels'                 => array( 
             'name'               => 'Islands', 

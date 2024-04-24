@@ -18,6 +18,7 @@
 <body <?php body_class(); ?>>
 
 <header class="header">
+    
     <div class="container">
         
  <!-- MENU HEADER -->
@@ -46,35 +47,6 @@
         </nav>
     </div>
 
-    <!-- SLIDER HEADER-->
-  
-    <section class= "slider_header">
-     
-    <?php if( have_rows('slider') ): 
-    
-    echo '<div class="slick-slider">';
-
-    while ( have_rows('slider') ) : the_row('slider');
-  
-    $image = get_sub_field('img_slide');
-    ?>
-    
-    <div class="slider_img" style="background-image: url(<?php echo $image['url']; ?>);">
-    <div class="slide_info">
-    <h1><?php the_sub_field('title')?></h1>
-    <p class="slide_text"> <?php the_sub_field('text')?></p>
-    </div>
-    </div>
-    <?php      
-  
-    endwhile;
-   
-endif;
-
-?>
-
-</section>
-     
 </header>
 
      
