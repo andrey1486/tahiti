@@ -26,13 +26,41 @@ $(function () {
 
   });
 
-  // wow = new WOW(
-  //   {
-  //     boxClass: 'wow',      // default
-  //     animateClass: 'animate__animated', // default
-  //     offset: 0,          // default
-  //     mobile: true,       // default
-  //     live: true        // default
-  //   }
-  // )
-  // wow.init();
+$(function() {
+  $(".carusel_card").slick({
+    infinite: true,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnFocus: true,
+    responsive: [
+	    {
+	      breakpoint: 1430,
+	      settings: {
+	        slidesToShow: 3,
+	      }
+	    },
+	    {
+	      breakpoint: 1070,
+	      settings: {
+	        slidesToShow: 2,
+	      }
+	    },
+      {
+	      breakpoint: 728,
+	      settings: {
+	        slidesToShow: 1,
+	      }
+	    }
+    ]
+});
+
+});
+
+$('#select-discover').on('change', function() {
+	let linkSelect = $(this).val();
+	let btn = $(".btn_discover");
+	btn.attr('href', linkSelect);
+})

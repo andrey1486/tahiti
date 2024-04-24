@@ -1,6 +1,9 @@
-
+<?php
+/**
+ * The template for displaying 404 page
+ */
 
 <?php get_header(); ?>
-<h1>404<h1>
+<h1>404 : Page Not Found<h1>
 <?php get_footer(); ?>
 

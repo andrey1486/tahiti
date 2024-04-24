@@ -1,4 +1,9 @@
 <?php
+/**
+ * Thahiti functions and definitions
+ *
+*/
+
 
 add_action( 'wp_enqueue_scripts', function() {
 
@@ -13,7 +18,6 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js');
 	wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), 'null', true);
-	wp_enqueue_script('wow', get_template_directory_uri() . '/assets/js/wow.min.js', array('jquery'), 'null', true);
 	wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), 'null', true);
 });
 
@@ -39,30 +43,6 @@ add_action( 'init', 'islands_register_types' );
 
 function islands_register_types(){
 
-    
-    register_taxonomy('category_islands', ['islands'], [
-        'labels'                => [
-            'name'              => 'Islands',
-            'singular_name'     => 'Island',
-            'search_items'      => 'Search island',
-            'all_items'         => 'All islands',
-            'view_item '        => 'View islands',
-            'edit_item'         => 'Edit islands',
-            'update_item'       => 'Update islands',
-            'add_new_item'      => 'Add new island',
-            'new_item_name'     => 'Add island',
-            'menu_name'         => 'All islands',
-        ],
-        'description'           => 'Category',
-        'public'                => true,
-        'hierarchical'          => true,
-        'show_ui'               => true,
-        'hierarchical'          => true,
-        'rewrite'               => true,
-        'show_admin_column'     => true,
-]);
-
-
     register_post_type( 'islands', array(
         'labels'                 => array( 
             'name'               => 'Islands', 
@@ -82,21 +62,26 @@ function islands_register_types(){
         'menu_position'       => 20,
         'menu_icon'           => 'dashicons-palmtree', 
         'hierarchical'        => false,
-        'supports'            => ['title','excerpt', 'thumbnail'],
-        'has_archive' => false,
+        'supports'            => ['title','excerpt'],
+        'has_archive'         => false,
+        'publicly_queryable'  => false,
     ));
 
 }
 
-// add_filter( 'nav_menu_link_attributes', 'my_nav_link_filter', 10, 4 );
-// function my_nav_link_filter( $atts, $item, $args){
-//    if( $args->theme_location == ('menu-footer-col-left') ){//если нужно для конкретного меню
-//     $atts['class'] .= 'menu_footer_link';
-//   }
-//   return $atts;
-// }
+add_theme_support(
+    'html5',
+    array(
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+        'style',
+        'script',
+    )
+);
 
-# Добавляет SVG в список разрешенных для загрузки файлов.
 function svg_upload_allow( $mimes ) {
 	$mimes['svg']  = 'image/svg+xml';
 

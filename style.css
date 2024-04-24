@@ -1,17 +1,17 @@
 /*
 Theme Name: Tahiti
-Theme URI:
+Theme URI: http://wordpress.org
 Author: Andrey Chervonuik
 Author URI: https://wordpress.org
-Description: test task for WHA
+Description: test task for WLA
 Requires at least: 1.0.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Version: 1.3
-License:
-License URI:
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: License
 Text Domain: TAHINI
-Tags:
+Tags:custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
 :root {
@@ -31,23 +31,27 @@ Tags:
 }
 
 @font-face {
-  font-family: "Gotham Bold", sans-serif;
-  src: url("/assets/fonts/Gotham/GothamBold.woff2") format("woff2");
+  font-family: "Gotham Bold";
+  src: url(./assets/fonts/Gotham/GothamBold.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: "Gotham Book", sans-serif;
-  src: url("/assets/fonts/Gotham/GothamBook.woff2") format("woff2");
+  font-family: "Gotham Book";
+  src: url(./assets/fonts/Gotham/GothamBook.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: "Gotham Book Italic", sans-serif;
-  src: url("/assets/fonts/Gotham/GothamBookItalic.woff2") format("woff2");
+  font-family: "Gotham Book Italic";
+  src: url(./assets/fonts/Gotham/GothamBookItalic.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: "Gotham Light", sans-serif;
-  src: url("/assets/fonts/Gotham/GothamLight.woff2") format("woff2");
+  font-family: "Gotham Light";
+  src: url(./assets/fonts/Gotham/GothamLight.woff2) format("woff2");
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,7 +60,7 @@ body {
   line-height: 1.688rem;
   font-weight: 300;
   color: #2c2b2b;
-  letter-spacing: 1px;
+  letter-spacing: normal;
 }
 
 a {
@@ -75,14 +79,18 @@ a {
   min-height: 9.375rem;
 }
 
+.nav_ul {
+  justify-content: flex-end;
+}
+
 .nav-link {
   font-family: "Gotham Book", sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
   text-transform: uppercase;
   color: var(--btn-secondary-bg-color);
-  padding-left: 68px!important;
-  padding-right: 0px!important;
+  padding-left: 4.25rem !important;
+  padding-right: 0px !important;
   letter-spacing: 2px;
 }
 
@@ -91,7 +99,7 @@ a {
   font-weight: 400;
   font-size: 2.5rem;
   color: var(--btn-secondary-bg-color);
-  padding-right: px;
+  line-height: normal;
 }
 
 @keyframes bounce {
@@ -115,13 +123,13 @@ a {
 }
 
 .nav-link:hover {
-  animation: bounce 1s;
   color: #3dbe98;
+  transition: 0.3s;
 }
 
 .navbar-brand:hover {
-  animation: bounce 1s;
   color: #3dbe98;
+  transition: 0.3s;
 }
 
 .hero_title {
@@ -149,14 +157,10 @@ a {
   transform: translate(-50%, 150%);
 }
 
-.slick-slider {
+.slider_img {
   min-height: 930px;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.caption_slider {
-
 }
 
 h1 {
@@ -164,11 +168,7 @@ h1 {
   font-weight: 700;
   font-size: 3.75rem;
   text-transform: uppercase;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -100%);
+  margin-bottom: 2.25rem;
   color: white;
 }
 
@@ -177,11 +177,13 @@ h1 {
   font-weight: 400;
   font-size: 1.875rem;
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, 140%);
+}
+
+.slide_info {
+  min-height: 930px;
+  text-align: center;
+  padding-top: 25rem;
+  background: rgba(4, 44, 93, 0.25);
 }
 
 .discover {
@@ -189,14 +191,15 @@ h1 {
   padding-bottom: 6.188rem;
 }
 
-.cards {
-  margin-bottom: 5.2rem;
+.carusel_card {
+  margin-bottom: 86px;
 }
 
 .island-card {
-  min-height: 448px;
+  height: 448px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.3s;
+  width: 348px;
 }
 
 .island-card:hover {
@@ -217,6 +220,8 @@ h1 {
 
 .island-details {
   padding: 1.25rem 1.25rem 0 1.25rem;
+  background-color: #fff;
+  height: 175px;
 }
 
 .island-details h4 a {
@@ -227,7 +232,6 @@ h1 {
   color: var(--btn-bg-color);
   overflow: hidden;
   text-transform: uppercase;
-  margin-bottom: ;
 }
 
 .island-details p {
@@ -254,12 +258,16 @@ h1 {
 .island-price small {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
-  margin-right: 13px;
+  margin-right: 0.813rem;
 }
 
 .island-links a {
   font-size: 1.25rem;
   margin-left: 10px;
+}
+
+.fa-arrow-right:hover {
+  animation: bounce 1s;
 }
 
 .discover {
@@ -310,12 +318,14 @@ h1 {
   background-color: var(--btn-bg-color);
   color: var(--secondary-text-color);
   border: none;
-  min-width: 300px;
-  min-height: 80px;
+  min-width: 18.75rem;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-group {
-  width: 70rem;
+  max-width: 70rem;
 }
 
 .form-select {
@@ -323,7 +333,7 @@ h1 {
   font-size: 1.5rem;
   font-weight: 400;
   color: #333333;
-  min-height: 80px;;
+  min-height: 80px;
   padding-left: 25px;
 }
 
@@ -379,9 +389,10 @@ h1 {
   color: var(--secondary-bg-color);
   background-color: var(--btn-secondary-bg-color);
   border: none;
-  text-align: center;
   width: 300px;
   height: 80px;
+  align-items: center;
+  justify-content: center;
 }
 
 .why {
@@ -390,10 +401,8 @@ h1 {
 
 .why_content {
   min-height: 250px;
-  min-width: 1482px;
   line-height: 21px;
 }
-
 
 .title_why_strong {
   font-family: "Gotham Bold", sans-serif;
@@ -403,7 +412,15 @@ h1 {
   text-transform: uppercase;
   padding-top: 113px;
   margin-bottom: 70px;
-  justify-content: center;
+}
+
+.title_why_island {
+  font-family: "Gotham Light", sans-serif;
+  color: var(--btn-secondary-bg-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding-top: 113px;
+  margin-bottom: 70px;
 }
 
 .title_text {
@@ -412,6 +429,7 @@ h1 {
   font-size: 1.1rem;
   font-weight: 300;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .vacations {
@@ -428,7 +446,6 @@ h1 {
 
 .btn_vac {
   position: absolute;
-  /* top: 2814px; */
   left: 40%;
   font-family: "Gotham Book", sans-serif;
   font-size: 1.1rem;
@@ -436,9 +453,10 @@ h1 {
   background-color: var(--btn-bg-color);
   color: var(--secondary-text-color);
   border: none;
-  text-align: center;
-  min-width: 300px;
-  min-height: 80px;
+  min-width: 18.75rem;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .title_vacations {
@@ -446,8 +464,8 @@ h1 {
   color: var(--secondary-text-color);
   font-size: 2.5rem;
   font-weight: 700;
-  padding-top: 109px;
-  padding-bottom: 25px;
+  padding-top: 6.813rem;
+  padding-bottom: 1.563rem;
 }
 
 .text_vacations {
@@ -464,15 +482,16 @@ h1 {
   max-width: 76.875rem;
 }
 
-
-
+.footer {
+  letter-spacing: 3px;
+}
 
 .social_link:hover {
   animation: bounce 1s;
   color: #3dbe98;
 }
 
-button:hover {
+.button:hover {
   background: #09db95;
   transform: translate(0, 0.25em);
   transition-duration: 0.6s;
@@ -482,4 +501,99 @@ button:hover::before {
   box-shadow: 0 0 0 2px #7badee, 0 0.5em 0 0 #b811c7;
   transform: translate3d(0, 0.5em, -1em);
   transition-duration: 0.4s;
+}
+
+.navbar-footer {
+  padding: 6.8rem 0 0.7rem 0;
+}
+
+.col-4 {
+  margin-top: -70px;
+}
+
+.footer li:first-child {
+  margin-bottom: 20px;
+}
+
+/* .footer .container .footer_links .col-4 li>a:first-child {
+  font-weight: 700;
+  text-transform: uppercase;
+}   */
+
+.col-4 a {
+  font-family: "Gotham Light";
+  text-transform: lowercase;
+  line-height: normal;
+}
+
+.col-4 a::first-letter {
+  text-transform: uppercase;
+}
+
+@media (max-width: 1150px) {
+  .social {
+    flex-direction: column !important;
+  }
+
+  .footer_links {
+    margin-top: -170px;
+  }
+}
+
+@media (max-width: 920px) {
+  .nav-link {
+    padding-left: 10px !important;
+  }
+}
+
+@media (max-width: 840px) {
+  .navbar-brand,
+  .custom-logo {
+    display: none;
+  }
+  .footer_links {
+    justify-content: space-between !important;
+    align-items: center;
+  }
+  .social {
+    flex-direction: row !important;
+    justify-content: center !important;
+    margin-bottom: 250px !important;
+    margin-right: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer_links {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 846px) {
+  .btn_vac {
+    min-width: 12rem;
+    min-height: 3rem;
+    font-size: 12px;
+    left: 20%;
+  }
+
+  .vacations_content {
+    min-height: 35rem;
+  }
+
+  .btn_discover {
+    min-width: 8rem;
+    font-size: 12px;
+  }
+
+  .title_experience {
+    display: block !important;
+  }
+
+  .form-select {
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
 }
